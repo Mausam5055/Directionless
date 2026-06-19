@@ -1,515 +1,2139 @@
-<!DOCTYPE html><!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Mon Feb 02 2026 08:58:06 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="directionless.webflow.io" data-wf-page="694347eb3d2a1ac9916fe534" data-wf-site="assets" data-wf-status="1"><head><meta charset="utf-8"><link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous"><title>DIRECTIONLESS | An ode to those who feel ...</title><meta content="For the ones willing to make something beautiful while still trying to make ends meet" name="description"><meta content="DIRECTIONLESS | An ode to those who feel ..." property="og:title"><meta content="For the ones willing to make something beautiful while still trying to make ends meet" property="og:description"><meta content="https://cdn.prod.website-files.com/assets/logo512.png" property="og:image"><meta content="DIRECTIONLESS | An ode to those who feel ..." name="twitter:title"><meta content="For the ones willing to make something beautiful while still trying to make ends meet" name="twitter:description"><meta property="og:type" content="website"><meta content="summary_large_image" name="twitter:card"><meta content="width=device-width, initial-scale=1" name="viewport"><meta content="Webflow" name="generator"><link href="assets/css/directionless.webflow.shared.76de48e89.min.css" rel="stylesheet" type="text/css"><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="assets/favicon.png" rel="shortcut icon" type="image/x-icon"><link href="assets/logo256.png" rel="apple-touch-icon"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.css">
-
-</head><body data-theme="light" class="body"><div class="custom-code-embed w-embed"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/bundled/locomotive-scroll.css">
-<style>
-/* =========================
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://cdn.prod.website-files.com"
+      rel="preconnect"
+      crossorigin="anonymous"
+    />
+    <title>DIRECTIONLESS | An ode to those who feel ...</title>
+    <meta
+      content="For the ones willing to make something beautiful while still trying to make ends meet"
+      name="description"
+    />
+    <meta
+      content="DIRECTIONLESS | An ode to those who feel ..."
+      property="og:title"
+    />
+    <meta
+      content="For the ones willing to make something beautiful while still trying to make ends meet"
+      property="og:description"
+    />
+    <meta
+      content="https://cdn.prod.website-files.com/assets/images/logo512.png"
+      property="og:image"
+    />
+    <meta
+      content="DIRECTIONLESS | An ode to those who feel ..."
+      name="twitter:title"
+    />
+    <meta
+      content="For the ones willing to make something beautiful while still trying to make ends meet"
+      name="twitter:description"
+    />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="assets/css/directionless.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="text/javascript">
+      !(function (o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        ((n.className += t + "js"),
+          ("ontouchstart" in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch"));
+      })(window, document);
+    </script>
+    <link
+      href="assets/images/favicon.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link href="assets/images/logo256.png" rel="apple-touch-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.css"
+    />
+  </head>
+  <body data-theme="light" class="body">
+    <div class="custom-code-embed w-embed">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/bundled/locomotive-scroll.css"
+      />
+      <style>
+        /* =========================
    RESET
 ========================= */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: inherit;
-  text-underline-offset: 2px;
-}
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          color: inherit;
+          text-underline-offset: 2px;
+        }
 
-/* =========================
+        /* =========================
    OSMO SCALING SYSTEM
    https://osmo.supply/
 ========================= */
-/* Desktop */
-:root {
-  --size-unit: 16;              /* body font-size in design - no px */
-  --size-container-ideal: 1728; /* screen-size in design - no px */
-  --size-container-min: 992px;
-  --size-container-max: 1920px;
-  --size-container: clamp(var(--size-container-min), 100vw, var(--size-container-max));
-  --size-font: calc(var(--size-container) / (var(--size-container-ideal) / var(--size-unit)));
+        /* Desktop */
+        :root {
+          --size-unit: 16; /* body font-size in design - no px */
+          --size-container-ideal: 1728; /* screen-size in design - no px */
+          --size-container-min: 992px;
+          --size-container-max: 1920px;
+          --size-container: clamp(
+            var(--size-container-min),
+            100vw,
+            var(--size-container-max)
+          );
+          --size-font: calc(
+            var(--size-container) /
+              (var(--size-container-ideal) / var(--size-unit))
+          );
 
-  --black: #121212;
-  --light: #ffffff;
-  --dark: #1E1E1E;
-  --grey: #F4F4F4;
-  --lightBlue: #1A73E8;
-  --dark-grey: #DFDFDF;
-  --darker-grey: #6C6C6C;
-  --blue: #514CF5;
-}
+          --black: #121212;
+          --light: #ffffff;
+          --dark: #1e1e1e;
+          --grey: #f4f4f4;
+          --lightBlue: #1a73e8;
+          --dark-grey: #dfdfdf;
+          --darker-grey: #6c6c6c;
+          --blue: #514cf5;
+        }
 
-/* Tablet */
-@media screen and (max-width: 991px) {
-  :root {
-    --size-container-ideal: 768;
-    --size-container-min: 768px;
-    --size-container-max: 991px;
-  }
-}
+        /* Tablet */
+        @media screen and (max-width: 991px) {
+          :root {
+            --size-container-ideal: 768;
+            --size-container-min: 768px;
+            --size-container-max: 991px;
+          }
+        }
 
-/* Mobile Landscape */
-@media screen and (max-width: 767px) {
-  :root {
-    --size-container-ideal: 550;
-    --size-container-min: 480px;
-    --size-container-max: 767px;
-  }
-}
+        /* Mobile Landscape */
+        @media screen and (max-width: 767px) {
+          :root {
+            --size-container-ideal: 550;
+            --size-container-min: 480px;
+            --size-container-max: 767px;
+          }
+        }
 
-/* Mobile Portrait */
-@media screen and (max-width: 479px) {
-  :root {
-    --size-container-ideal: 402;
-    --size-container-min: 320px;
-    --size-container-max: 479px;
-  }
-}
+        /* Mobile Portrait */
+        @media screen and (max-width: 479px) {
+          :root {
+            --size-container-ideal: 402;
+            --size-container-min: 320px;
+            --size-container-max: 479px;
+          }
+        }
 
-/* =========================
+        /* =========================
    BASE
 ========================= */
-body {
-  transition: background-color 350ms ease, color 350ms ease;
-  font-size: var(--size-font);
-  color: var(--dark);
-}
+        body {
+          transition:
+            background-color 350ms ease,
+            color 350ms ease;
+          font-size: var(--size-font);
+          color: var(--dark);
+        }
 
-/* Theme tokens */
-[data-theme="light"] {
-  background-color: var(--grey);
-  color: var(--dark);
-}
+        /* Theme tokens */
+        [data-theme="light"] {
+          background-color: var(--grey);
+          color: var(--dark);
+        }
 
-[data-theme="grey"] {
-  background-color: var(--dark-grey);
-  color: var(--dark);
-}
+        [data-theme="grey"] {
+          background-color: var(--dark-grey);
+          color: var(--dark);
+        }
 
-[data-theme="grey-black"] {
-  background-color: var(--grey);
-  color: var(--black);
-}
+        [data-theme="grey-black"] {
+          background-color: var(--grey);
+          color: var(--black);
+        }
 
-[data-theme="dark"] {
-  background-color: var(--black);
-  color: var(--grey);
-}
+        [data-theme="dark"] {
+          background-color: var(--black);
+          color: var(--grey);
+        }
 
-[data-theme="white"] {
-  background-color: var(--light);
-  color: var(--black);
-}
+        [data-theme="white"] {
+          background-color: var(--light);
+          color: var(--black);
+        }
 
-[data-theme="blue"] {
-  background-color: var(--lightBlue);
-  color: var(--light);
-}
+        [data-theme="blue"] {
+          background-color: var(--lightBlue);
+          color: var(--light);
+        }
 
-[data-theme="saturated"] {
-  background-color: var(--blue);
-  color: var(--light);
-}
+        [data-theme="saturated"] {
+          background-color: var(--blue);
+          color: var(--light);
+        }
 
-/* Containers */
-.container {
-  max-width: var(--size-container);
-}
+        /* Containers */
+        .container {
+          max-width: var(--size-container);
+        }
 
-.container.medium {
-  max-width: calc(var(--size-container) * 0.85);
-}
+        .container.medium {
+          max-width: calc(var(--size-container) * 0.85);
+        }
 
-.container.small {
-  max-width: calc(var(--size-container) * 0.7);
-}
+        .container.small {
+          max-width: calc(var(--size-container) * 0.7);
+        }
 
-/* =========================
+        /* =========================
    CUSTOM CODE
 ========================= */
-[class*=" sg-text-"],
-[class^="sg-text-"] {
-  color: inherit;
-}
+        [class*=" sg-text-"],
+        [class^="sg-text-"] {
+          color: inherit;
+        }
 
-.hero-top_text-wrap > *,
-.hero-top_text-endwrap > * {
-  font-weight: bold;
-  text-transform: uppercase;
-}
+        .hero-top_text-wrap > *,
+        .hero-top_text-endwrap > * {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
 
-.hero-top_text_wrapper-end > * {
-  position: relative !important;
-}
+        .hero-top_text_wrapper-end > * {
+          position: relative !important;
+        }
 
-/* SplitText safety */
-[data-split="heading"] {
-  visibility: hidden;
-}
+        /* SplitText safety */
+        [data-split="heading"] {
+          visibility: hidden;
+        }
 
-/* Webflow Designer/Editor: prevent disappearing */
-.wf-design-mode [data-split="heading"],
-.w-editor [data-split="heading"] {
-  visibility: visible !important;
-}
+        /* Custom Designer/Editor: prevent disappearing */
+        .wf-design-mode [data-split="heading"],
+        .w-editor [data-split="heading"] {
+          visibility: visible !important;
+        }
 
-/* Footer arrow hover */
-.footer-arrow_svg-wrapper {
-  transition: all 0.3s ease-in-out !important;
-  width: 100%;
-}
+        /* Footer arrow hover */
+        .footer-arrow_svg-wrapper {
+          transition: all 0.3s ease-in-out !important;
+          width: 100%;
+        }
 
-footer .footer-social-link:hover .footer-arrow_svg-wrapper.is--1 {
-  top: -50%;
-  left: 150%;
-}
+        footer .footer-social-link:hover .footer-arrow_svg-wrapper.is--1 {
+          top: -50%;
+          left: 150%;
+        }
 
-footer .footer-social-link:hover .footer-arrow_svg-wrapper.is--2 {
-  top: 50%;
-  left: 50%;
-}
+        footer .footer-social-link:hover .footer-arrow_svg-wrapper.is--2 {
+          top: 50%;
+          left: 50%;
+        }
 
-/* =========================
+        /* =========================
    CANVAS / SHATTER / NOISE
 ========================= */
-.canvas-plane {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  pointer-events: none;
-  z-index: 100;
-}
+        .canvas-plane {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: block;
+          pointer-events: none;
+          z-index: 100;
+        }
 
-#noise-canvas::before {
-  z-index: 1000;
-  pointer-events: none;
-}
+        #noise-canvas::before {
+          z-index: 1000;
+          pointer-events: none;
+        }
 
-[data-shatter-canvas] {
-  background: transparent !important;
-  display: block;
-}
+        [data-shatter-canvas] {
+          background: transparent !important;
+          display: block;
+        }
 
-[data-shatter-image] {
-  opacity: 0;
-}
+        [data-shatter-image] {
+          opacity: 0;
+        }
 
-@media (max-width: 992px) {
-  [data-shatter-image] {
-    opacity: 1;
-  }
-}
+        @media (max-width: 992px) {
+          [data-shatter-image] {
+            opacity: 1;
+          }
+        }
 
-/* =========================
+        /* =========================
    DRIP BARS
 ========================= */
-.drip-bars {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 200;
-  display: flex;
-  gap: 0;
-}
+        .drip-bars {
+          position: fixed;
+          inset: 0;
+          pointer-events: none;
+          z-index: 200;
+          display: flex;
+          gap: 0;
+        }
 
-.drip-bar {
-  flex: 1;
-  height: 0;
-  background: var(--black);
-  align-self: flex-start;
-  will-change: height;
-  border-left: 1px solid var(--dark-grey);
-}
+        .drip-bar {
+          flex: 1;
+          height: 0;
+          background: var(--black);
+          align-self: flex-start;
+          will-change: height;
+          border-left: 1px solid var(--dark-grey);
+        }
 
-.drip-bar:first-child {
-  border-left: none;
-}
+        .drip-bar:first-child {
+          border-left: none;
+        }
 
-.drip-cap--flat {
-  border-radius: 0;
-  clip-path: none;
-}
+        .drip-cap--flat {
+          border-radius: 0;
+          clip-path: none;
+        }
 
-.drip-cap--rounded {
-  border-bottom-left-radius: 1000px;
-  border-bottom-right-radius: 1000px;
-}
+        .drip-cap--rounded {
+          border-bottom-left-radius: 1000px;
+          border-bottom-right-radius: 1000px;
+        }
 
-.drip-cap--pointy {
-  border-radius: 0;
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% calc(100% - 100px),
-    50% 100%,
-    0% calc(100% - 100px)
-  );
-}
+        .drip-cap--pointy {
+          border-radius: 0;
+          clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% calc(100% - 100px),
+            50% 100%,
+            0% calc(100% - 100px)
+          );
+        }
 
-/* =========================
+        /* =========================
    PIXEL TRANSITION
 ========================= */
-.pixel-transition {
-  position: fixed;
-  inset: 0;
-  z-index: 550;
-  pointer-events: none;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  background: transparent;
-}
+        .pixel-transition {
+          position: fixed;
+          inset: 0;
+          z-index: 550;
+          pointer-events: none;
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+          background: transparent;
+        }
 
-.pixel-transition-block {
-  background: var(--light);
-}
+        .pixel-transition-block {
+          background: var(--light);
+        }
 
-/* =========================
+        /* =========================
    CLOCK / SVG
 ========================= */
-.light-svg_layout {
-  top: -80vh;
-}
+        .light-svg_layout {
+          top: -80vh;
+        }
 
-svg.clock-svg {
-  width: 100svw;
-  height: 100svh;
-  overflow: visible;
-  opacity: 0.5;
-}
+        svg.clock-svg {
+          width: 100svw;
+          height: 100svh;
+          overflow: visible;
+          opacity: 0.5;
+        }
 
-.clock-ink {
-  stroke: var(--dark);
-  fill: var(--dark);
-}
+        .clock-ink {
+          stroke: var(--dark);
+          fill: var(--dark);
+        }
 
-.tick-mark {
-  stroke-linecap: butt;
-}
+        .tick-mark {
+          stroke-linecap: butt;
+        }
 
-.hour-text {
-  text-anchor: middle;
-  dominant-baseline: middle;
-  font-weight: bold;
-  font-family: "Times New Roman", serif;
-}
+        .hour-text {
+          text-anchor: middle;
+          dominant-baseline: middle;
+          font-weight: bold;
+          font-family: "Times New Roman", serif;
+        }
 
-/* =========================
+        /* =========================
    RESPONSIVE TWEAKS
 ========================= */
-@media (max-width: 991px) {
-  .light-svg_layout {
-    top: -100vh;
-  }
+        @media (max-width: 991px) {
+          .light-svg_layout {
+            top: -100vh;
+          }
 
-  .drip-bar:nth-child(n + 7) {
-    display: none;
-  }
-}
+          .drip-bar:nth-child(n + 7) {
+            display: none;
+          }
+        }
 
-@media (max-width: 767px) {
-  .pixel-transition {
-    grid-template-columns: repeat(6, 1fr);
-  }
+        @media (max-width: 767px) {
+          .pixel-transition {
+            grid-template-columns: repeat(6, 1fr);
+          }
 
-  .drip-bar:nth-child(n + 4) {
-    display: none;
-  }
-}
+          .drip-bar:nth-child(n + 4) {
+            display: none;
+          }
+        }
 
-@media (max-width: 479px) {
-  .pixel-transition {
-    grid-template-columns: repeat(4, 1fr);
-  }
+        @media (max-width: 479px) {
+          .pixel-transition {
+            grid-template-columns: repeat(4, 1fr);
+          }
 
-  .light-svg_layout {
-    top: -80vh;
-  }
-}
+          .light-svg_layout {
+            top: -80vh;
+          }
+        }
 
-/* =========================
+        /* =========================
    UNDERLINE LINK
 ========================= */
-[data-underline-link] {
-  text-decoration: none;
-  position: relative;
-}
+        [data-underline-link] {
+          text-decoration: none;
+          position: relative;
+        }
 
-[data-underline-link]::before,
-[data-underline-link="alt"]::before,
-[data-underline-link="alt"]::after {
-  content: "";
-  position: absolute;
-  bottom: -0.0625em;
-  left: 0;
-  width: 100%;
-  height: 0.0625em;
-  background-color: currentColor;
-  transition: transform 0.5s cubic-bezier(0.625, 0.05, 0, 1);
-  transform-origin: right;
-  transform: scaleX(0) rotate(0.001deg);
-}
+        [data-underline-link]::before,
+        [data-underline-link="alt"]::before,
+        [data-underline-link="alt"]::after {
+          content: "";
+          position: absolute;
+          bottom: -0.0625em;
+          left: 0;
+          width: 100%;
+          height: 0.0625em;
+          background-color: currentColor;
+          transition: transform 0.5s cubic-bezier(0.625, 0.05, 0, 1);
+          transform-origin: right;
+          transform: scaleX(0) rotate(0.001deg);
+        }
 
-[data-underline-link="alt"]::before {
-  transform-origin: left;
-  transform: scaleX(1) rotate(0.001deg);
-  transition-delay: 0.3s;
-}
+        [data-underline-link="alt"]::before {
+          transform-origin: left;
+          transform: scaleX(1) rotate(0.001deg);
+          transition-delay: 0.3s;
+        }
 
-[data-underline-link="alt"]::after {
-  transform-origin: right;
-  transform: scaleX(0) rotate(0.001deg);
-  transition-delay: 0s;
-}
+        [data-underline-link="alt"]::after {
+          transform-origin: right;
+          transform: scaleX(0) rotate(0.001deg);
+          transition-delay: 0s;
+        }
 
-@media (hover: hover) and (pointer: fine) {
-  [data-hover]:hover [data-underline-link]::before,
-  [data-underline-link]:hover::before {
-    transform-origin: left;
-    transform: scaleX(1) rotate(0.001deg);
-  }
+        @media (hover: hover) and (pointer: fine) {
+          [data-hover]:hover [data-underline-link]::before,
+          [data-underline-link]:hover::before {
+            transform-origin: left;
+            transform: scaleX(1) rotate(0.001deg);
+          }
 
-  [data-hover]:hover [data-underline-link="alt"]::before,
-  [data-underline-link="alt"]:hover::before {
-    transform-origin: right;
-    transform: scaleX(0) rotate(0.001deg);
-    transition-delay: 0s;
-  }
+          [data-hover]:hover [data-underline-link="alt"]::before,
+          [data-underline-link="alt"]:hover::before {
+            transform-origin: right;
+            transform: scaleX(0) rotate(0.001deg);
+            transition-delay: 0s;
+          }
 
-  [data-hover]:hover [data-underline-link="alt"]::after,
-  [data-underline-link="alt"]:hover::after {
-    transform-origin: left;
-    transform: scaleX(1) rotate(0.001deg);
-    transition-delay: 0.3s;
-  }
-}
+          [data-hover]:hover [data-underline-link="alt"]::after,
+          [data-underline-link="alt"]:hover::after {
+            transform-origin: left;
+            transform: scaleX(1) rotate(0.001deg);
+            transition-delay: 0.3s;
+          }
+        }
 
-/* =========================
+        /* =========================
    LOADER
 ========================= */
-.loader-img_wrapper.is--base {
-  opacity: 0.2;
-}
+        .loader-img_wrapper.is--base {
+          opacity: 0.2;
+        }
 
-.loader-img_wrapper.is--top {
-  -webkit-clip-path: inset(0% 100% 0% 0%);
-  clip-path: inset(0% 100% 0% 0%);
-}
+        .loader-img_wrapper.is--top {
+          -webkit-clip-path: inset(0% 100% 0% 0%);
+          clip-path: inset(0% 100% 0% 0%);
+        }
 
-/* =========================
+        /* =========================
    SCROLLBAR
 ========================= */
-/* Firefox */
-html, body {
-  scrollbar-width: none;
-}
+        /* Firefox */
+        html,
+        body {
+          scrollbar-width: none;
+        }
 
-/* Chrome/Edge/Safari */
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
+        /* Chrome/Edge/Safari */
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+        }
 
-/* Hide Webflow Watermark Badge */
-.w-webflow-badge {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
+        /* Hide Watermark Badge */
+        .w-custom-badge {
+          display: none !important;
+          visibility: hidden !important;
+          opacity: 0 !important;
+          pointer-events: none !important;
+        }
+      </style>
+    </div>
+    <div class="custom-code-embed w-embed w-script">
+      <!-- GSAP core -->
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/Flip.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
 
-</style></div><div class="custom-code-embed w-embed w-script"><!-- GSAP core -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/Flip.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/bundled/locomotive-scroll.min.js"></script>
+      <!-- CSS -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.css"
+      />
 
+      <!-- JS -->
+      <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/bundled/locomotive-scroll.min.js"></script> 
-<!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.css">
-
-<!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script> 
-
-<!-- Local Bundle -->
-<script src="js/directionless.ts" type="module"></script></div><div id="smooth-content" data-scroll-container="" class="body-wrapper"><div class="custom-code-embed w-embed"><canvas class="canvas-plane" data-shatter-canvas=""></canvas></div><div id="smooth-content" data-scroll-content="" class="body-content"><div class="noise-container"><div data-theme-section="light" class="hero-section"><div class="w-layout-blockcontainer container sg-container w-container"><div class="hero-top_layout"><div data-hero-text-wrapper="" class="hero-top_text-wrapper-end"><div class="hero-top_text-endwrap"></div><div class="hero-top_text-endwrap"></div><div class="hero-top_text-endwrap"></div><div class="hero-top_text-endwrap"></div><div class="hero-top_text-endwrap"></div><div class="hero-top_text-endwrap"></div></div><div class="hero-top_text-wrapper"><div data-stagger="0.1" data-hero-text-block="" data-anim="[[2,3],[1,4],[1,2]]" class="hero-top_text-block"><div class="hero-top_text-wrap"><div data-hero-text-item="" class="sg-text-body-mini">an</div></div><div class="hero-top_text-wrap"><div data-hero-text-item="" class="sg-text-body-mini">ode</div></div></div><div data-stagger="0" data-hero-text-block="" data-anim="[[4,3],[2,4],[1,2]]" class="hero-top_text-block"><div class="hero-top_text-wrap"><div data-hero-text-item="" class="sg-text-body-mini">to</div></div><div class="hero-top_text-wrap"><div data-hero-text-item="" class="sg-text-body-mini">those</div></div></div><div data-stagger="0.2" data-hero-text-block="" data-anim="[[4,1],[2,3],[1,4],[1,2]]" class="hero-top_text-block"><div class="hero-top_text-wrap"><div data-hero-text-item="" class="sg-text-body-mini">who</div></div><div class="hero-top_text-wrap"><div data-hero-text-item="" class="sg-text-body-mini">feel</div></div></div></div></div></div><div class="hero-layout_inner"><div data-glitch-within="" class="hero-top_wrapper"><img class="hero-image_directionless" src="assets/directionless.png" data-shatter-image="" width="Auto" alt="Directionless" sizes="(max-width: 1680px) 100vw, 1680px" loading="eager" srcset="assets/directionless-p-500.png 500w, assets/directionless-p-800.png 800w, assets/directionless-p-1080.png 1080w, assets/directionless.png 1680w"><div class="illustration_overlay-wrapper"><div data-illustration-overlay="1" class="illustration-overlay"></div><div data-illustration-overlay="1" class="illustration-overlay"></div><div data-illustration-overlay="1" class="illustration-overlay"></div><div data-illustration-overlay="1" class="illustration-overlay"></div></div></div><div class="hero-illustration"><div data-glitch-="" class="hero-illustration-layout"><div data-glitch-group="" class="hero-illustration_wrapper"><div class="hero-illustration_inner"><div class="hero-main-illustration"><div data-glitch-within="" class="hero-illustration_item illust-man-drowning"><img class="hero-image_drowning" src="assets/man-drowning.png" data-shatter-image="" width="1200" alt="" sizes="100vw" data-animation-bop="3.5" loading="eager" srcset="assets/man-drowning-p-500.png 500w, assets/man-drowning-p-800.png 800w, assets/man-drowning-p-1080.png 1080w, assets/man-drowning.png 2400w"></div></div><div class="hero-illustration_item illust-ball"><img class="hero-image_illustrations" src="assets/ball.png" data-shatter-image="" alt="" sizes="(max-width: 734px) 100vw, 734px" data-animation-bop="3" loading="eager" srcset="assets/ball-p-500.png 500w, assets/ball.png 734w"></div><div class="hero-illustration_item illust-jug"><img class="hero-image_illustrations" src="assets/jug.png" data-shatter-image="" alt="" sizes="(max-width: 603px) 100vw, 603px" data-animation-bop="3.5" loading="eager" srcset="assets/jug-p-500.png 500w, assets/jug.png 603w"></div><div class="hero-illustration_item illust-chair"><img class="hero-image_illustrations" src="assets/chair.png" data-shatter-image="" alt="" sizes="(max-width: 547px) 100vw, 547px" data-animation-bop="6" loading="eager" srcset="assets/chair-p-500.png 500w, assets/chair.png 547w"></div><div class="hero-illustration_item illust-book"><img src="assets/book3.png" loading="eager" data-animation-bop="5" data-shatter-image="" alt="" class="hero-image_illustrations"></div></div><div class="illustration_overlay-wrapper"><div data-illustration-overlay="1" class="illustration-overlay"></div><div data-illustration-overlay="1" class="illustration-overlay"></div><div data-illustration-overlay="1" class="illustration-overlay"></div><div data-illustration-overlay="1" class="illustration-overlay"></div><div data-illustration-overlay="1" class="illustration-overlay"></div></div></div></div></div></div><div class="container sg-container"><div class="inner-layout"><div class="inner-layout_wrapper"><div class="inner-layout_text-wrapper"><h1 data-split-style="words" data-split="heading" class="sg-text-body-large inner-layout_h2-text">For the ones willing to make something beautiful while still trying to make ends meet</h1><p data-split-style="lines" data-split="heading" class="sg-text-body-small inner-layout_mini-text">This isn’t advice. It’s just a note, from one of us...</p></div></div><div class="inner-illustrations"><div class="inner-illustrations_layout"><div data-glitch="" class="inner-illustrations_reach"><div data-glitch-within="" class="inner-illustrations_reach-wrapper"><img class="illustration-image_reach" src="assets/man-reaching.png" data-shatter-image="" width="693.5" alt="" sizes="(max-width: 767px) 100vw, 694px" data-animation-bop="" loading="eager" srcset="assets/man-reaching-p-500.png 500w, assets/man-reaching-p-800.png 800w, assets/man-reaching-p-1080.png 1080w, assets/man-reaching.png 1387w"></div></div><div data-feet-wrapper="" class="inner-illustrations_feet"><div data-feet="1" class="illustration-feet feet-1"><img src="assets/right1.png" loading="lazy" data-feet-item="1" alt="" class="inner-illustration_feet"></div><div data-feet="1" class="illustration-feet feet-2"><img src="assets/left1.png" loading="lazy" data-feet-item="1" alt="" class="inner-illustration_feet"></div><div data-feet="1" class="illustration-feet feet-3"><img src="assets/right2.png" loading="lazy" data-feet-item="1" alt="" class="inner-illustration_feet"></div><div data-feet="1" class="illustration-feet feet-4"><img src="assets/left2.png" loading="lazy" data-feet-item="1" alt="" class="inner-illustration_feet"></div><div data-feet="1" class="illustration-feet feet-5"><img src="assets/right3.png" loading="lazy" data-feet-item="1" alt="" class="inner-illustration_feet"></div><div data-feet="1" class="illustration-feet feet-6"><img src="assets/left3.png" loading="lazy" data-feet-item="1" alt="" class="inner-illustration_feet"></div></div></div></div></div></div></div><div data-theme-section="grey" class="grey-section"><div class="container sg-container"><div class="grey-layout"><p data-split-style="words" data-split="heading" id="w-node-c6be6341-bf17-7590-61a6-0308b8383d13-916fe534" class="sg-text-body-large grey-section_text">             I became a creative because I wanted to do something great, create good from nothing, help people live better, and take away some of the ugliness in the world.</p><div data-glitch-within="" aria-label="but..." id="w-node-_8d0355c6-6d77-8cea-3877-d296517b1913-916fe534" class="grey-illustrations_but"><img class="grey-illustration-image" src="assets/but....png" data-shatter-image="" width="70" alt="" sizes="70px" loading="lazy" srcset="assets/but...-p-500.png 500w, assets/but....png 663w"></div><p data-split-style="words" data-split="heading" id="w-node-_222aa249-156e-d3a7-0a19-a290dd177de1-916fe534" class="sg-text-body-large grey-section_text">When passion becomes your paycheck, things shift. Less expression. More obligation. Your work gets judged before it gets felt. You start chasing approval instead of ideas.</p><p data-split-style="lines" data-split="heading" id="w-node-_42875965-3af5-7d56-d2aa-6adc24d2e273-916fe534" class="sg-text-body-large grey-section_text grey-section_text-last">The pressure piles on.  <br>Slow at first. Then all at once.</p></div></div><div class="delirious-section"><div data-delirious-wrapper="" class="delirious-layout"><div class="delirious-texts"><div data-delirious-texts="" class="delirious-texts_wrapper"><img src="assets/marketing.png" loading="eager" sizes="(max-width: 1178px) 100vw, 1178px" srcset="assets/marketing-p-500.png 500w, assets/marketing-p-800.png 800w, assets/marketing.png 1178w" alt="marketing" class="delirious-text_image dti-1"><img src="assets/family.png" loading="eager" sizes="(max-width: 710px) 100vw, 710px" srcset="assets/family-p-500.png 500w, assets/family.png 710w" alt="marketing" class="delirious-text_image dti-2"><img src="assets/outreach.png" loading="eager" sizes="(max-width: 1086px) 100vw, 1086px" srcset="assets/outreach-p-500.png 500w, assets/outreach-p-800.png 800w, assets/outreach.png 1086w" alt="marketing" class="delirious-text_image dti-3"><img src="assets/clients.png" loading="eager" sizes="(max-width: 776px) 100vw, 776px" srcset="assets/clients-p-500.png 500w, assets/clients.png 776w" alt="marketing" class="delirious-text_image dti-4"><img src="assets/socials.png" loading="eager" sizes="(max-width: 825px) 100vw, 825px" srcset="assets/socials-p-500.png 500w, assets/socials.png 825w" alt="marketing" class="delirious-text_image dti-5"><img src="assets/finance.png" loading="eager" sizes="(max-width: 797px) 100vw, 797px" srcset="assets/finance-p-500.png 500w, assets/finance.png 797w" alt="marketing" class="delirious-text_image dti-6"></div></div><div data-delirious-face="" class="delirious-image"><div class="delirious-image_wrapper"><img src="assets/delirious-face.png" loading="eager" data-shatter-image="" alt="" class="delirious-image_head"></div></div></div></div></div><div data-theme-section="dark" class="dark-section"><div data-drip-bars="" class="drip-bars"></div><div data-pixel-transition="" class="pixel-transition"></div><div class="container sg-container"><div class="dark-text_layout"><div id="w-node-_50a809ed-92ec-de8a-7c6b-14323000d8e2-916fe534" class="dark-text_wrapper"><p data-split-style="words" data-split="heading" class="sg-text-body-large dark-text">You’re doing everything you’re supposed to do. Posting, emailing, updating the portfolio, trying to stay confident even when the silence feels like rejection. You see others growing while you’re here wondering if you’re actually moving or just pretending. You study the gurus, learn the systems, try to play the game right, but results never show up fast enough to calm that voice saying maybe you’re not good enough. You keep acting like you’ve got direction, even though you’re figuring it out one shaky step at a time. Some nights you look at your work and think, what if all this effort isn’t leading anywhere? But you wake up and do it again. You still show up. You still believe there’s something here worth fighting for. And honestly, that tiny bit of belief is the only reason you haven’t quit.</p></div></div><div data-pixel-transition-wrapper="" class="dark-illustration_layout"><div class="dark-illustration_wrapper"><img class="dark-illustration" src="assets/man-falling.png" data-shatter-image="" alt="" sizes="(max-width: 1168px) 100vw, 1168px" data-animation-bop="" loading="eager" srcset="assets/man-falling-p-500.png 500w, assets/man-falling-p-800.png 800w, assets/man-falling.png 1168w"></div></div></div></div></div><div data-theme-section="white" class="light-section"><div data-pixel-transition="" class="pixel-transition-padding"></div><div class="light-layout"><div class="container sg-container"><div data-shift-section="" class="shift-section"><div class="shift-layout"><div class="shift-text_block-wrapper"><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">But</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">Then,</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">Something</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">Shifts</div></div></div><div class="shift-text_block-wrapper"><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">Not</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">Dramatically,</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">Not</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">All</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">At</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">Once</div></div></div><div class="shift-text_block-wrapper"><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">You</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">Learn</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">To</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">Breathe</div></div><div data-shift-text-block="" class="shift-text_block"><div class="sg-text-body-large">Again</div></div></div></div></div><div class="care-section"><div class="light-svg_layout"><div class="light-svg_wrapper"><div class="w-embed"><svg data-svg-wrapper="" style="width: 100%; height: 100%;" viewbox="0 0 1976 6071" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path data-svg-path="" d="M54.0784 320.178C54.0784 320.178 291.979 167.143 480.241 126.665C1574.4 -108.587 -14.443 1271.02 232.265 1941.77C511.831 2701.86 1767.64 2424.3 1869.6 3196.84C1961.44 3892.65 913.829 3975.39 633.68 4489.92C535.619 4670.02 547.664 4806.66 500.04 5011.44C366.078 5587.48 139.578 6024.98 139.578 6024.98" stroke="#1A73E8" stroke-linecap="square" stroke-width="200"></path>
-</svg></div></div></div><div class="care-layout"><div class="care-text_wrapper right-side"><div class="care-text"><div data-split-style="words" data-split="heading" class="sg-text-body-huge care-text_right">You start caring less about being seen and more about seeing the people who support you, the small wins that used to go unnoticed.</div></div></div><div class="care-text_wrapper"><div class="care-text"><div data-split-style="words" data-split="heading" class="sg-text-body-huge">You find friends who remind you that the creative path was never meant to be straight. You realize that growth isn’t a sprint...</div></div></div><div class="care-text_wrapper right-side"><div class="care-text"><div data-split-style="words" data-split="heading" class="sg-text-body-huge care-text_right">It’s the quiet endurance between failures. You start finding beauty in the uncertainty, and maybe even find...</div></div></div></div></div></div></div></div><div data-theme-section="blue" class="blue-section"><div aria-label="peace" class="peace-section"><div class="peace-layout"><div data-peace-inner="" class="peace-inner_container"><div class="peace-image_wrapper"><img src="assets/peace.png" loading="eager" width="1500" sizes="100vw" alt="" srcset="assets/peace-p-500.png 500w, assets/peace-p-800.png 800w, assets/peace-p-1080.png 1080w, assets/peace-p-1600.png 1600w, assets/peace-p-2000.png 2000w, assets/peace.png 3000w" class="peace-image"></div><div class="peace-image_wrapper"><img src="assets/peace.png" loading="eager" width="1500" sizes="100vw" alt="" srcset="assets/peace-p-500.png 500w, assets/peace-p-800.png 800w, assets/peace-p-1080.png 1080w, assets/peace-p-1600.png 1600w, assets/peace-p-2000.png 2000w, assets/peace.png 3000w" class="peace-image"></div></div><div data-peace-inner="2" class="peace-inner_container peace-inner_absolute is-2"><div class="peace-image_wrapper"><img src="assets/peace.png" loading="eager" width="1500" sizes="100vw" alt="" srcset="assets/peace-p-500.png 500w, assets/peace-p-800.png 800w, assets/peace-p-1080.png 1080w, assets/peace-p-1600.png 1600w, assets/peace-p-2000.png 2000w, assets/peace.png 3000w" class="peace-image"></div><div class="peace-image_wrapper"><img src="assets/peace.png" loading="eager" width="1500" sizes="100vw" alt="" srcset="assets/peace-p-500.png 500w, assets/peace-p-800.png 800w, assets/peace-p-1080.png 1080w, assets/peace-p-1600.png 1600w, assets/peace-p-2000.png 2000w, assets/peace.png 3000w" class="peace-image"></div></div><div data-peace-inner="3" class="peace-inner_container peace-inner_absolute is-3"><div class="peace-image_wrapper"><img src="assets/peace.png" loading="eager" width="1500" sizes="100vw" alt="" srcset="assets/peace-p-500.png 500w, assets/peace-p-800.png 800w, assets/peace-p-1080.png 1080w, assets/peace-p-1600.png 1600w, assets/peace-p-2000.png 2000w, assets/peace.png 3000w" class="peace-image"></div><div class="peace-image_wrapper"><img src="assets/peace.png" loading="eager" width="1500" sizes="100vw" alt="" srcset="assets/peace-p-500.png 500w, assets/peace-p-800.png 800w, assets/peace-p-1080.png 1080w, assets/peace-p-1600.png 1600w, assets/peace-p-2000.png 2000w, assets/peace.png 3000w" class="peace-image"></div></div><div data-peace-inner="4" class="peace-inner_container peace-inner_absolute is-4"><div class="peace-image_wrapper"><img src="assets/peace.png" loading="eager" width="1500" sizes="100vw" alt="" srcset="assets/peace-p-500.png 500w, assets/peace-p-800.png 800w, assets/peace-p-1080.png 1080w, assets/peace-p-1600.png 1600w, assets/peace-p-2000.png 2000w, assets/peace.png 3000w" class="peace-image"></div><div class="peace-image_wrapper"><img src="assets/peace.png" loading="eager" width="1500" sizes="100vw" alt="" srcset="assets/peace-p-500.png 500w, assets/peace-p-800.png 800w, assets/peace-p-1080.png 1080w, assets/peace-p-1600.png 1600w, assets/peace-p-2000.png 2000w, assets/peace.png 3000w" class="peace-image"></div></div><div data-peace-inner="5" class="peace-inner_container peace-inner_absolute is-5"><div class="peace-image_wrapper"><img src="assets/peace.png" loading="eager" width="1500" sizes="100vw" alt="" srcset="assets/peace-p-500.png 500w, assets/peace-p-800.png 800w, assets/peace-p-1080.png 1080w, assets/peace-p-1600.png 1600w, assets/peace-p-2000.png 2000w, assets/peace.png 3000w" class="peace-image"></div><div class="peace-image_wrapper"><img src="assets/peace.png" loading="eager" width="1500" sizes="100vw" alt="" srcset="assets/peace-p-500.png 500w, assets/peace-p-800.png 800w, assets/peace-p-1080.png 1080w, assets/peace-p-1600.png 1600w, assets/peace-p-2000.png 2000w, assets/peace.png 3000w" class="peace-image"></div></div><div class="peace-star"><div class="w-embed"><svg style="width: 100%; aspect-ratio: 1/1;" viewbox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M34.5 0C34.5 0 36.4035 17.7673 43.8181 25.1819C51.2327 32.5965 69 34.5 69 34.5C69 34.5 51.2327 36.4035 43.8181 43.8181C36.4035 51.2327 34.5 69 34.5 69C34.5 69 32.5965 51.2327 25.1819 43.8181C17.7673 36.4035 0 34.5 0 34.5C0 34.5 17.7673 32.5965 25.1819 25.1819C32.5965 17.7673 34.5 0 34.5 0Z" fill="white"></path>
-</svg></div></div></div></div><div class="motivational-section"><div class="container"><div class="motivational-layout"><div data-split="heading" class="sg-text-body-large motivational-text">And so, you keep going. You stop waiting for clarity and start walking anyway. You learn that direction comes slowly, like light in the morning, you don’t notice it until it’s there.</div></div></div></div><div class="trying-section"><div class="container trying-container"><div class="trying-layout"><div id="w-node-_0810dca9-a1c7-55a6-a495-a1fdf8e84dc7-916fe534" class="typing-word_grid"><div id="w-node-_1d743d20-2750-fc64-dbf6-09836b8801c6-916fe534" class="trying-word word--you"><div class="code-embed w-embed"><svg style="width: 100%;" viewbox="0 0 304 118" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M58.2472 115.701H40.6302V70.3093L0 2.22196H18.8867L49.3594 56.5014H49.6768L80.1494 2.22196H98.8774L58.2472 70.3093V115.701Z" fill="white"></path>
-<path d="M148.079 117.923C114.115 117.923 92.3715 93.0051 92.3715 58.8821C92.3715 24.759 114.115 0 148.079 0C182.044 0 203.787 24.759 203.787 58.8821C203.787 93.0051 182.044 117.923 148.079 117.923ZM148.079 102.845C174.902 102.845 185.535 82.2127 185.535 58.8821C185.535 35.5514 174.902 15.0776 148.079 15.0776C121.257 15.0776 110.623 35.5514 110.623 58.8821C110.623 82.2127 121.257 102.845 148.079 102.845Z" fill="white"></path>
-<path d="M259.561 117.923C228.453 117.923 215.28 101.576 215.28 77.1339V2.22196H232.738V77.1339C232.738 94.7509 241.626 102.845 259.561 102.845C277.654 102.845 286.383 94.7509 286.383 77.1339V2.22196H304V77.1339C304 101.576 290.827 117.923 259.561 117.923Z" fill="white"></path>
-</svg></div></div><div id="w-node-dffd6e26-5b05-5a41-85e5-72b7c01fa133-916fe534" class="trying-word word--stop"><div class="w-embed"><svg style="width:100%;" viewbox="0 0 1375 422" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M179.426 421.877C76.6533 421.877 4.54242 368.504 0 277.088H64.7295C69.2719 331.597 101.637 368.504 177.722 368.504C243.019 368.504 262.893 340.114 262.893 303.206C262.893 251.536 223.146 244.155 149.332 225.418C85.7382 208.383 15.8985 187.943 15.8985 110.721C15.8985 40.314 70.4075 0 157.849 0C250.401 0 310.588 47.1276 316.834 128.891H252.104C245.291 80.0602 217.468 53.3734 158.417 53.3734C107.315 53.3734 81.1957 72.1109 81.1957 107.315C81.1957 152.739 123.781 162.391 176.019 175.451C254.375 195.324 328.19 214.061 328.19 299.8C328.19 369.639 281.062 421.877 179.426 421.877Z" fill="white"></path>
-<path d="M513.058 413.928H450.032V61.8905H318.87V7.94923H644.221V61.8905H513.058V413.928Z" fill="white"></path>
-<path d="M829.675 421.877C708.165 421.877 630.376 332.732 630.376 210.655C630.376 88.5772 708.165 0 829.675 0C951.184 0 1028.97 88.5772 1028.97 210.655C1028.97 332.732 951.184 421.877 829.675 421.877ZM829.675 367.936C925.633 367.936 963.676 294.122 963.676 210.655C963.676 127.188 925.633 53.9412 829.675 53.9412C733.716 53.9412 695.673 127.188 695.673 210.655C695.673 294.122 733.716 367.936 829.675 367.936Z" fill="white"></path>
-<path d="M1135.39 413.928H1072.93V7.94923H1242.13C1318.79 7.94923 1375 43.7208 1375 128.891C1375 214.061 1318.79 249.265 1242.13 249.265H1135.39V413.928ZM1135.39 195.324H1239.3C1286.42 195.324 1310.27 174.315 1310.27 128.891C1310.27 82.8992 1286.42 61.8905 1239.3 61.8905H1135.39V195.324Z" fill="white"></path>
-</svg></div></div></div><div class="typing-word_grid"><div id="w-node-_8780ce8c-363e-959a-991a-fdb3074bb8d7-916fe534" class="trying-word word--trying"><div class="w-embed"><svg style="width: 100%;" viewbox="0 0 610 136" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M62.1623 132.504H41.9868V19.812H0V2.54465H104.149V19.812H62.1623V132.504Z" fill="white"></path>
-<path d="M134.238 132.504H114.244V2.54465H168.409C197.127 2.54465 212.577 15.995 212.577 39.9874C212.577 56.5277 202.58 68.5239 188.221 71.7956V72.1591C218.393 77.7937 207.306 129.05 214.394 131.231V132.504H192.946C187.13 127.051 199.49 81.6107 167.682 81.6107H134.238V132.504ZM134.238 64.3434H164.046C182.404 64.3434 192.401 56.3459 192.401 41.4415C192.401 27.4459 184.404 19.812 164.41 19.812H134.238V64.3434Z" fill="white"></path>
-<path d="M277.82 132.504H257.645V80.5201L211.114 2.54465H232.744L267.642 64.7069H268.005L302.903 2.54465H324.351L277.82 80.5201V132.504Z" fill="white"></path>
-<path d="M353.018 132.504H333.025V2.54465H353.018V132.504Z" fill="white"></path>
-<path d="M393.361 132.504H373.367V2.54465H396.269L456.614 102.513H456.977V2.54465H477.153V132.504H454.251L393.724 32.5352H393.361V132.504Z" fill="white"></path>
-<path d="M549.837 135.048C512.394 135.048 491.31 106.694 491.31 67.4333C491.31 28.3547 515.121 0 552.2 0C585.826 0 603.638 17.9943 607.819 42.7138H586.916C583.463 26.3553 571.285 17.2673 552.018 17.2673C523.3 17.2673 512.213 43.0774 512.213 67.4333C512.213 91.9711 520.574 117.781 550.928 117.781C572.375 117.781 589.461 102.877 589.643 81.2472H551.291V64.5252H610V132.504H596.186L591.279 114.509H590.915C581.827 127.778 569.649 135.048 549.837 135.048Z" fill="white"></path>
-</svg></div></div></div><div id="w-node-c5282358-ca46-5396-6289-07ee1921b7d9-916fe534" class="typing-word_grid"><div id="w-node-_5294d1a2-2522-f1d1-68f0-7b719293b9a8-916fe534" class="trying-word word--trying"><div class="w-embed"><svg style="width: 100%" viewbox="0 0 309 184" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M84.3546 179.808H56.9764V26.885H0V3.45311H141.331V26.885H84.3546V179.808Z" fill="white"></path>
-<path d="M221.891 183.262C169.108 183.262 135.317 144.537 135.317 91.5075C135.317 38.4775 169.108 0 221.891 0C274.675 0 308.466 38.4775 308.466 91.5075C308.466 144.537 274.675 183.262 221.891 183.262ZM221.891 159.83C263.575 159.83 280.101 127.765 280.101 91.5075C280.101 55.2498 263.575 23.4318 221.891 23.4318C180.207 23.4318 163.682 55.2498 163.682 91.5075C163.682 127.765 180.207 159.83 221.891 159.83Z" fill="white"></path>
-</svg></div></div></div><div id="w-node-_82c5c2e4-eb58-de6a-475f-bfe9724e7a0e-916fe534" class="typing-word_grid flex-too"><div id="w-node-_1baf7ddd-06b7-a457-27d2-3e9cde00c33a-916fe534" class="trying-word word--fix"><div class="w-embed"><svg style="width:100%" viewbox="0 0 453 248" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M38.1273 247.827H0V0H171.919V32.9281H38.1273V107.45H146.27V140.378H38.1273V247.827Z" fill="white"></path>
-<path d="M230.145 247.827H192.018V0H230.145V247.827Z" fill="white"></path>
-<path d="M287.666 247.827H242.953L326.833 121.314L248.846 0H291.132L348.67 93.5852H349.016L406.901 0H448.841L370.853 120.621L453 247.827H408.634L347.977 149.043H347.63L287.666 247.827Z" fill="white"></path>
-</svg></div></div><div id="w-node-_7004fc89-dd76-851a-f0e9-5d0d5ac00e78-916fe534" class="typing-word_mini-grid"><div class="trying-word word--and"><div class="w-embed"><svg style="width: 100%;" viewbox="0 0 918 119" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M82.2495 116.201H0V2.23158H80.6556V17.3744H17.5338V49.7323H72.845V64.8751H17.5338V101.059H82.2495V116.201Z" fill="white"></path>
-<path d="M141.909 116.201H122.941L82.7726 2.23158H102.06L132.345 97.7112H132.505L162.631 2.23158H181.121L141.909 116.201Z" fill="white"></path>
-<path d="M271.467 116.201H189.217V2.23158H269.873V17.3744H206.751V49.7323H262.062V64.8751H206.751V101.059H271.467V116.201Z" fill="white"></path>
-<path d="M300.659 116.201H283.125V2.23158H330.626C355.811 2.23158 369.36 14.0271 369.36 35.0676C369.36 49.5729 360.593 60.0932 348 62.9623V63.2811C374.46 68.2225 364.737 113.173 370.954 115.086V116.201H352.145C347.044 111.419 357.883 71.5699 329.988 71.5699H300.659V116.201ZM300.659 56.427H326.8C342.899 56.427 351.666 49.4135 351.666 36.3428C351.666 24.0692 344.653 17.3744 327.119 17.3744H300.659V56.427Z" fill="white"></path>
-<path d="M426.576 116.201H408.883V70.6135L368.077 2.23158H387.045L417.65 56.7458H417.969L448.573 2.23158H467.382L426.576 70.6135V116.201Z" fill="white"></path>
-<path d="M520.576 116.201H502.883V17.3744H466.062V2.23158H557.397V17.3744H520.576V116.201Z" fill="white"></path>
-<path d="M583.784 116.201H566.25V2.23158H583.784V49.8917H639.733V2.23158H657.426V116.201H639.733V65.0345H583.784V116.201Z" fill="white"></path>
-<path d="M692.636 116.201H675.102V2.23158H692.636V116.201Z" fill="white"></path>
-<path d="M728.015 116.201H710.481V2.23158H730.565L783.485 89.9007H783.804V2.23158H801.497V116.201H781.413L728.333 28.5323H728.015V116.201Z" fill="white"></path>
-<path d="M865.239 118.433C832.403 118.433 813.913 93.5668 813.913 59.1368C813.913 24.8661 834.794 0 867.311 0C896.8 0 912.421 15.7804 916.087 37.4586H897.756C894.728 23.1128 884.048 15.1428 867.152 15.1428C841.967 15.1428 832.244 37.7774 832.244 59.1368C832.244 80.6556 839.576 103.29 866.195 103.29C885.004 103.29 899.988 90.2195 900.147 71.2511H866.514V56.5864H918V116.201H905.886L901.582 100.421H901.263C893.293 112.057 882.613 118.433 865.239 118.433Z" fill="white"></path>
-</svg></div></div><div id="w-node-_68965f34-fbb1-93f2-e13a-74c6603bab82-916fe534" class="typing-word_instead"><div class="trying-word word--instead"><div class="w-embed"><svg style="width: 100%;" viewbox="0 0 127 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.424 45.76H0L17.024 0H24.64L41.792 45.76H34.112L30.336 34.752H11.2L7.424 45.76ZM20.736 6.528L13.312 28.8H28.352L20.864 6.528H20.736Z" fill="white"></path>
-<path d="M51.658 45.76H44.618V0H52.682L73.93 35.2H74.058V0H81.162V45.76H73.098L51.786 10.56H51.658V45.76Z" fill="white"></path>
-<path d="M105.859 45.76H88.323V0H105.731C118.403 0 126.083 8.192 126.083 22.912C126.083 37.632 118.531 45.76 105.859 45.76ZM95.363 39.68H105.411C116.035 39.68 118.787 31.744 118.787 22.912C118.787 14.08 116.035 6.08 105.411 6.08H95.363V39.68Z" fill="white"></path>
-</svg></div></div><div id="w-node-_79422711-a08e-2eb5-12ab-e2b0d3825c86-916fe534" class="trying-word word--everything"><div class="w-embed"><svg style="width: 100%;" viewbox="0 0 247 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.04 46.656H0V0.896H7.04V46.656Z" fill="white"></path>
-<path d="M21.245 46.656H14.205V0.896H22.269L43.517 36.096H43.645V0.896H50.749V46.656H42.685L21.373 11.456H21.245V46.656Z" fill="white"></path>
-<path d="M75.126 47.552C63.542 47.552 55.414 41.536 54.902 31.232H62.198C62.71 37.376 66.358 41.536 74.934 41.536C82.294 41.536 84.534 38.336 84.534 34.176C84.534 28.352 80.054 27.52 71.734 25.408C64.566 23.488 56.694 21.184 56.694 12.48C56.694 4.544 62.838 0 72.694 0C83.126 0 89.91 5.312 90.614 14.528H83.318C82.55 9.024 79.414 6.016 72.758 6.016C66.998 6.016 64.054 8.128 64.054 12.096C64.054 17.216 68.854 18.304 74.742 19.776C83.574 22.016 91.894 24.128 91.894 33.792C91.894 41.664 86.582 47.552 75.126 47.552Z" fill="white"></path>
-<path d="M112.731 46.656H105.627V6.976H90.8435V0.896H127.515V6.976H112.731V46.656Z" fill="white"></path>
-<path d="M164.094 46.656H131.07V0.896H163.454V6.976H138.11V19.968H160.318V26.048H138.11V40.576H164.094V46.656Z" fill="white"></path>
-<path d="M171.911 46.656H164.487L181.511 0.896H189.127L206.279 46.656H198.599L194.823 35.648H175.687L171.911 46.656ZM185.223 7.424L177.799 29.696H192.839L185.351 7.424H185.223Z" fill="white"></path>
-<path d="M226.641 46.656H209.105V0.896H226.513C239.185 0.896 246.865 9.088 246.865 23.808C246.865 38.528 239.313 46.656 226.641 46.656ZM216.145 40.576H226.193C236.817 40.576 239.569 32.64 239.569 23.808C239.569 14.976 236.817 6.976 226.193 6.976H216.145V40.576Z" fill="white"></path>
-</svg></div></div></div></div></div></div></div></div><div class="time-section"><div class="time-clock_layout"><div class="time-clock_wrapper"><div class="time-clock_embed w-embed"><svg class="clock-svg" viewbox="-1000 -1000 2000 2000" preserveaspectratio="xMidYMid slice">
-  <defs>
-    <filter id="ink-texture">
-      <feturbulence type="fractalNoise" basefrequency="0.8" numoctaves="3" result="noise"></feturbulence>
-      <fedisplacementmap in="SourceGraphic" in2="noise" scale="4"></fedisplacementmap>
-    </filter>
-  </defs>
-  <g id="spiral-group" filter="url(#ink-texture)"></g>
-</svg></div></div></div><div class="time-content_layout"><div class="container sg-container"><div class="time-content_wrapper"><div data-split="custom" id="w-node-_60035cec-f762-ec3a-b5e7-5d830c83f871-916fe534" class="sg-text-body-huge time-text">LET TIME DO</div><div data-split="custom" id="w-node-d1a5963c-78fb-72df-ce01-fd2b5961215f-916fe534" class="sg-text-body-huge time-text">WHAT IT DOES</div><div data-split="custom" id="w-node-_2c428f3d-554b-3c68-0504-dba36a3491f3-916fe534" class="sg-text-body-huge time-text">BEST</div></div></div></div></div><div class="align-section"><div class="container sg-container"><div class="align-layout"><div class="align-wrapper"><div data-split-style="chars" data-split="heading" id="w-node-_73511162-13f1-5223-7d31-553beb64539d-916fe534" class="sg-text-display align-text">SOFTEN</div><div data-split-style="chars" data-split="heading" id="w-node-_697f091a-4352-5612-321a-10e45a50b50c-916fe534" class="sg-text-display align-text">REVEAL</div><div data-split-style="chars" data-split="heading" id="w-node-_9eadf229-07bd-4a3f-08f1-865c5d0096bb-916fe534" class="sg-text-display align-text">ALIGN</div></div></div></div></div><div class="white-padding"></div></div><div data-theme-section="white" class="light-section"><div class="white-padding"></div><section data-sticky-title="wrap" class="sticky-title-wrapper"><div class="sticky-title-container"><div class="sticky-title-inner"><h1 data-sticky-title="heading" class="sg-text-body-huge">But maybe that’s the<br>whole point</h1><h2 data-sticky-title="heading" class="sg-text-body-huge is--stacked">Maybe direction<br>isn’t found</h2><h2 data-sticky-title="heading" class="sg-text-body-huge is--stacked">Maybe it forms under your feet as you keep walking</h2></div></div></section></div><div data-theme-section="grey-black" class="grey-section-footer"><footer class="footer-layout"><div class="container sg-container footer-container"><div class="footer-grid"><div id="w-node-_9622c26e-d471-0803-e41d-4295bf39fc44-916fe534" class="footer-text_wrapper"><div class="sg-text-body-huge">JUST KEEP</div><img class="footer-text_image" src="assets/walking.png" data-shatter-image="" alt="Directionless" sizes="(max-width: 1750px) 100vw, 1750px" loading="eager" srcset="assets/walking-p-500.png 500w, assets/walking-p-800.png 800w, assets/walking-p-1080.png 1080w, assets/walking.png 1750w"></div><div id="w-node-_654a34dc-0662-34c6-0cb5-e601afc32904-916fe534" class="sg-text-body-mini">We created this project as an outpouring of our present predicament. Hopefully it resonated with you. If are currently going through a similar time, just know it gets better.<br><br>Tatakae!</div><div id="w-node-_978983bd-25a2-9831-79a8-b87a90fad9b3-916fe534" class="footer-links"><a data-underline-link="" href="https://www.instagram.com/ac-dc/" target="_blank" class="footer-social-link w-inline-block"><div aria-label="staggering button" class="btn-animate-chars"><div class="btn-animate-chars__bg sg-text-body-mini"></div><span data-button-animate-chars="" class="btn-animate-chars__text sg-text-body-mini">instagram</span></div><div class="footer-arrow"><div class="footer-arrow_svg-wrapper is--1 w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z" fill="currentColor"></path>
-</svg></div><div class="footer-arrow_svg-wrapper is--2 w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z" fill="currentColor"></path>
-</svg></div></div></a><a data-underline-link="" href="https://www.linkedin.com/in/ac-dc/" target="_blank" class="footer-social-link w-inline-block"><div aria-label="staggering button" class="btn-animate-chars"><div class="btn-animate-chars__bg sg-text-body-mini"></div><span data-button-animate-chars="" class="btn-animate-chars__text sg-text-body-mini">linkedin</span></div><div class="footer-arrow"><div class="footer-arrow_svg-wrapper is--1 w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z" fill="currentColor"></path>
-</svg></div><div class="footer-arrow_svg-wrapper is--2 w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z" fill="currentColor"></path>
-</svg></div></div></a><a data-underline-link="" href="https://x.com/ac-dc" target="_blank" class="footer-social-link w-inline-block"><div aria-label="staggering button" class="btn-animate-chars"><div class="btn-animate-chars__bg sg-text-body-mini"></div><span data-button-animate-chars="" class="btn-animate-chars__text sg-text-body-mini">x (twitter)</span></div><div class="footer-arrow"><div class="footer-arrow_svg-wrapper is--1 w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z" fill="currentColor"></path>
-</svg></div><div class="footer-arrow_svg-wrapper is--2 w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z" fill="currentColor"></path>
-</svg></div></div></a><a data-underline-link="" href="mailto:contact@ac-dc.com" class="footer-social-link w-inline-block"><div aria-label="staggering button" class="btn-animate-chars"><div class="btn-animate-chars__bg sg-text-body-mini"></div><span data-button-animate-chars="" class="btn-animate-chars__text sg-text-body-mini">email me</span></div><div class="footer-arrow"><div class="footer-arrow_svg-wrapper is--1 w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z" fill="currentColor"></path>
-</svg></div><div class="footer-arrow_svg-wrapper is--2 w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z" fill="currentColor"></path>
-</svg></div></div></a></div><div id="w-node-_06e89925-3fd9-4119-2731-052d7a5b24fb-916fe534" class="footer-ref"><div class="sg-text-body-mini">Designed &amp; Developed By <a href="https://ac-dc.com" data-underline-link="alt" target="_blank" class="link">AC-DC team</a></div></div><div id="w-node-_6a556f5a-5486-c8c7-e1f1-eb8ae68f4d23-916fe534" class="sg-text-body-mini just-keep-text">Just Keep Walking...</div><div id="w-node-_5d47466d-a390-1438-c40d-ea5645b3aa2a-916fe534" class="sg-text-body-mini">© 2026. All Rights Reserved</div><img class="footer-image-drowning" src="assets/man-drowning.png" data-shatter-image="" width="1200" alt="" sizes="100vw" data-animation-bop="4" id="w-node-dd4e005b-ba70-51f5-3c76-dbcfa02fd35b-916fe534" loading="eager" srcset="assets/man-drowning-p-500.png 500w, assets/man-drowning-p-800.png 800w, assets/man-drowning-p-1080.png 1080w, assets/man-drowning.png 2400w"></div></div></footer></div></div></div><div data-load-bg="" class="loader-wrapper"><div class="container sg-container"><div data-load-container="" class="loader-layout"><div class="sg-text-body-small loader-text">Directionless</div><div class="sg-text-body-small loader-text loader-text-2">Loading...</div><div class="loader-img_wrapper is--base"><img src="assets/loader-image.png" loading="eager" sizes="100vw" srcset="assets/loader-image-p-500.png 500w, assets/loader-image-p-800.png 800w, assets/loader-image-p-1080.png 1080w, assets/loader-image-p-1600.png 1600w, assets/loader-image-p-2000.png 2000w, assets/loader-image.png 3900w" alt="" class="image"></div><div data-load-logo="" class="loader-img_wrapper is--top"><img src="assets/loader-image.png" loading="eager" sizes="100vw" srcset="assets/loader-image-p-500.png 500w, assets/loader-image-p-800.png 800w, assets/loader-image-p-1080.png 1080w, assets/loader-image-p-1600.png 1600w, assets/loader-image-p-2000.png 2000w, assets/loader-image.png 3900w" alt="" class="image"></div></div></div></div><script src="js/jquery-3.5.1.min.dc5e7f18c8.js?site=assets" type="text/javascript"></script><script src="assets/js/webflow.751e0867.7161e47da9598001.js" type="text/javascript"></script></body></html>
+      <!-- Local Bundle -->
+      <script src="js/directionless.ts" type="module"></script>
+    </div>
+    <div id="smooth-content" data-scroll-container="" class="body-wrapper">
+      <div class="custom-code-embed w-embed">
+        <canvas class="canvas-plane" data-shatter-canvas=""></canvas>
+      </div>
+      <div id="smooth-content" data-scroll-content="" class="body-content">
+        <div class="noise-container">
+          <div data-theme-section="light" class="hero-section">
+            <div
+              class="w-layout-blockcontainer container sg-container w-container"
+            >
+              <div class="hero-top_layout">
+                <div
+                  data-hero-text-wrapper=""
+                  class="hero-top_text-wrapper-end"
+                >
+                  <div class="hero-top_text-endwrap"></div>
+                  <div class="hero-top_text-endwrap"></div>
+                  <div class="hero-top_text-endwrap"></div>
+                  <div class="hero-top_text-endwrap"></div>
+                  <div class="hero-top_text-endwrap"></div>
+                  <div class="hero-top_text-endwrap"></div>
+                </div>
+                <div class="hero-top_text-wrapper">
+                  <div
+                    data-stagger="0.1"
+                    data-hero-text-block=""
+                    data-anim="[[2,3],[1,4],[1,2]]"
+                    class="hero-top_text-block"
+                  >
+                    <div class="hero-top_text-wrap">
+                      <div data-hero-text-item="" class="sg-text-body-mini">
+                        an
+                      </div>
+                    </div>
+                    <div class="hero-top_text-wrap">
+                      <div data-hero-text-item="" class="sg-text-body-mini">
+                        ode
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-stagger="0"
+                    data-hero-text-block=""
+                    data-anim="[[4,3],[2,4],[1,2]]"
+                    class="hero-top_text-block"
+                  >
+                    <div class="hero-top_text-wrap">
+                      <div data-hero-text-item="" class="sg-text-body-mini">
+                        to
+                      </div>
+                    </div>
+                    <div class="hero-top_text-wrap">
+                      <div data-hero-text-item="" class="sg-text-body-mini">
+                        those
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-stagger="0.2"
+                    data-hero-text-block=""
+                    data-anim="[[4,1],[2,3],[1,4],[1,2]]"
+                    class="hero-top_text-block"
+                  >
+                    <div class="hero-top_text-wrap">
+                      <div data-hero-text-item="" class="sg-text-body-mini">
+                        who
+                      </div>
+                    </div>
+                    <div class="hero-top_text-wrap">
+                      <div data-hero-text-item="" class="sg-text-body-mini">
+                        feel
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-layout_inner">
+              <div data-glitch-within="" class="hero-top_wrapper">
+                <img
+                  class="hero-image_directionless"
+                  src="assets/images/directionless.png"
+                  data-shatter-image=""
+                  width="Auto"
+                  alt="Directionless"
+                  sizes="(max-width: 1680px) 100vw, 1680px"
+                  loading="eager"
+                  srcset="
+                    assets/images/directionless-p-500.png   500w,
+                    assets/images/directionless-p-800.png   800w,
+                    assets/images/directionless-p-1080.png 1080w,
+                    assets/images/directionless.png        1680w
+                  "
+                />
+                <div class="illustration_overlay-wrapper">
+                  <div
+                    data-illustration-overlay="1"
+                    class="illustration-overlay"
+                  ></div>
+                  <div
+                    data-illustration-overlay="1"
+                    class="illustration-overlay"
+                  ></div>
+                  <div
+                    data-illustration-overlay="1"
+                    class="illustration-overlay"
+                  ></div>
+                  <div
+                    data-illustration-overlay="1"
+                    class="illustration-overlay"
+                  ></div>
+                </div>
+              </div>
+              <div class="hero-illustration">
+                <div data-glitch-="" class="hero-illustration-layout">
+                  <div data-glitch-group="" class="hero-illustration_wrapper">
+                    <div class="hero-illustration_inner">
+                      <div class="hero-main-illustration">
+                        <div
+                          data-glitch-within=""
+                          class="hero-illustration_item illust-man-drowning"
+                        >
+                          <img
+                            class="hero-image_drowning"
+                            src="assets/images/man-drowning.png"
+                            data-shatter-image=""
+                            width="1200"
+                            alt=""
+                            sizes="100vw"
+                            data-animation-bop="3.5"
+                            loading="eager"
+                            srcset="
+                              assets/images/man-drowning-p-500.png   500w,
+                              assets/images/man-drowning-p-800.png   800w,
+                              assets/images/man-drowning-p-1080.png 1080w,
+                              assets/images/man-drowning.png        2400w
+                            "
+                          />
+                        </div>
+                      </div>
+                      <div class="hero-illustration_item illust-ball">
+                        <img
+                          class="hero-image_illustrations"
+                          src="assets/images/ball.png"
+                          data-shatter-image=""
+                          alt=""
+                          sizes="(max-width: 734px) 100vw, 734px"
+                          data-animation-bop="3"
+                          loading="eager"
+                          srcset="
+                            assets/images/ball-p-500.png 500w,
+                            assets/images/ball.png       734w
+                          "
+                        />
+                      </div>
+                      <div class="hero-illustration_item illust-jug">
+                        <img
+                          class="hero-image_illustrations"
+                          src="assets/images/jug.png"
+                          data-shatter-image=""
+                          alt=""
+                          sizes="(max-width: 603px) 100vw, 603px"
+                          data-animation-bop="3.5"
+                          loading="eager"
+                          srcset="
+                            assets/images/jug-p-500.png 500w,
+                            assets/images/jug.png       603w
+                          "
+                        />
+                      </div>
+                      <div class="hero-illustration_item illust-chair">
+                        <img
+                          class="hero-image_illustrations"
+                          src="assets/images/chair.png"
+                          data-shatter-image=""
+                          alt=""
+                          sizes="(max-width: 547px) 100vw, 547px"
+                          data-animation-bop="6"
+                          loading="eager"
+                          srcset="
+                            assets/images/chair-p-500.png 500w,
+                            assets/images/chair.png       547w
+                          "
+                        />
+                      </div>
+                      <div class="hero-illustration_item illust-book">
+                        <img
+                          src="assets/images/book3.png"
+                          loading="eager"
+                          data-animation-bop="5"
+                          data-shatter-image=""
+                          alt=""
+                          class="hero-image_illustrations"
+                        />
+                      </div>
+                    </div>
+                    <div class="illustration_overlay-wrapper">
+                      <div
+                        data-illustration-overlay="1"
+                        class="illustration-overlay"
+                      ></div>
+                      <div
+                        data-illustration-overlay="1"
+                        class="illustration-overlay"
+                      ></div>
+                      <div
+                        data-illustration-overlay="1"
+                        class="illustration-overlay"
+                      ></div>
+                      <div
+                        data-illustration-overlay="1"
+                        class="illustration-overlay"
+                      ></div>
+                      <div
+                        data-illustration-overlay="1"
+                        class="illustration-overlay"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container sg-container">
+              <div class="inner-layout">
+                <div class="inner-layout_wrapper">
+                  <div class="inner-layout_text-wrapper">
+                    <h1
+                      data-split-style="words"
+                      data-split="heading"
+                      class="sg-text-body-large inner-layout_h2-text"
+                    >
+                      For the ones willing to make something beautiful while
+                      still trying to make ends meet
+                    </h1>
+                    <p
+                      data-split-style="lines"
+                      data-split="heading"
+                      class="sg-text-body-small inner-layout_mini-text"
+                    >
+                      This isn’t advice. It’s just a note, from one of us...
+                    </p>
+                  </div>
+                </div>
+                <div class="inner-illustrations">
+                  <div class="inner-illustrations_layout">
+                    <div data-glitch="" class="inner-illustrations_reach">
+                      <div
+                        data-glitch-within=""
+                        class="inner-illustrations_reach-wrapper"
+                      >
+                        <img
+                          class="illustration-image_reach"
+                          src="assets/images/man-reaching.png"
+                          data-shatter-image=""
+                          width="693.5"
+                          alt=""
+                          sizes="(max-width: 767px) 100vw, 694px"
+                          data-animation-bop=""
+                          loading="eager"
+                          srcset="
+                            assets/images/man-reaching-p-500.png   500w,
+                            assets/images/man-reaching-p-800.png   800w,
+                            assets/images/man-reaching-p-1080.png 1080w,
+                            assets/images/man-reaching.png        1387w
+                          "
+                        />
+                      </div>
+                    </div>
+                    <div data-feet-wrapper="" class="inner-illustrations_feet">
+                      <div data-feet="1" class="illustration-feet feet-1">
+                        <img
+                          src="assets/images/right1.png"
+                          loading="lazy"
+                          data-feet-item="1"
+                          alt=""
+                          class="inner-illustration_feet"
+                        />
+                      </div>
+                      <div data-feet="1" class="illustration-feet feet-2">
+                        <img
+                          src="assets/images/left1.png"
+                          loading="lazy"
+                          data-feet-item="1"
+                          alt=""
+                          class="inner-illustration_feet"
+                        />
+                      </div>
+                      <div data-feet="1" class="illustration-feet feet-3">
+                        <img
+                          src="assets/images/right2.png"
+                          loading="lazy"
+                          data-feet-item="1"
+                          alt=""
+                          class="inner-illustration_feet"
+                        />
+                      </div>
+                      <div data-feet="1" class="illustration-feet feet-4">
+                        <img
+                          src="assets/images/left2.png"
+                          loading="lazy"
+                          data-feet-item="1"
+                          alt=""
+                          class="inner-illustration_feet"
+                        />
+                      </div>
+                      <div data-feet="1" class="illustration-feet feet-5">
+                        <img
+                          src="assets/images/right3.png"
+                          loading="lazy"
+                          data-feet-item="1"
+                          alt=""
+                          class="inner-illustration_feet"
+                        />
+                      </div>
+                      <div data-feet="1" class="illustration-feet feet-6">
+                        <img
+                          src="assets/images/left3.png"
+                          loading="lazy"
+                          data-feet-item="1"
+                          alt=""
+                          class="inner-illustration_feet"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-theme-section="grey" class="grey-section">
+            <div class="container sg-container">
+              <div class="grey-layout">
+                <p
+                  data-split-style="words"
+                  data-split="heading"
+                  id="w-node-c6be6341-bf17-7590-61a6-0308b8383d13-916fe534"
+                  class="sg-text-body-large grey-section_text"
+                >
+                              I became a creative because I wanted to do
+                  something great, create good from nothing, help people live
+                  better, and take away some of the ugliness in the world.
+                </p>
+                <div
+                  data-glitch-within=""
+                  aria-label="but..."
+                  id="w-node-_8d0355c6-6d77-8cea-3877-d296517b1913-916fe534"
+                  class="grey-illustrations_but"
+                >
+                  <img
+                    class="grey-illustration-image"
+                    src="assets/images/but....png"
+                    data-shatter-image=""
+                    width="70"
+                    alt=""
+                    sizes="70px"
+                    loading="lazy"
+                    srcset="
+                      assets/images/but...-p-500.png 500w,
+                      assets/images/but....png       663w
+                    "
+                  />
+                </div>
+                <p
+                  data-split-style="words"
+                  data-split="heading"
+                  id="w-node-_222aa249-156e-d3a7-0a19-a290dd177de1-916fe534"
+                  class="sg-text-body-large grey-section_text"
+                >
+                  When passion becomes your paycheck, things shift. Less
+                  expression. More obligation. Your work gets judged before it
+                  gets felt. You start chasing approval instead of ideas.
+                </p>
+                <p
+                  data-split-style="lines"
+                  data-split="heading"
+                  id="w-node-_42875965-3af5-7d56-d2aa-6adc24d2e273-916fe534"
+                  class="sg-text-body-large grey-section_text grey-section_text-last"
+                >
+                  The pressure piles on.  <br />Slow at first. Then all at once.
+                </p>
+              </div>
+            </div>
+            <div class="delirious-section">
+              <div data-delirious-wrapper="" class="delirious-layout">
+                <div class="delirious-texts">
+                  <div data-delirious-texts="" class="delirious-texts_wrapper">
+                    <img
+                      src="assets/images/marketing.png"
+                      loading="eager"
+                      sizes="(max-width: 1178px) 100vw, 1178px"
+                      srcset="
+                        assets/images/marketing-p-500.png  500w,
+                        assets/images/marketing-p-800.png  800w,
+                        assets/images/marketing.png       1178w
+                      "
+                      alt="marketing"
+                      class="delirious-text_image dti-1"
+                    /><img
+                      src="assets/images/family.png"
+                      loading="eager"
+                      sizes="(max-width: 710px) 100vw, 710px"
+                      srcset="
+                        assets/images/family-p-500.png 500w,
+                        assets/images/family.png       710w
+                      "
+                      alt="marketing"
+                      class="delirious-text_image dti-2"
+                    /><img
+                      src="assets/images/outreach.png"
+                      loading="eager"
+                      sizes="(max-width: 1086px) 100vw, 1086px"
+                      srcset="
+                        assets/images/outreach-p-500.png  500w,
+                        assets/images/outreach-p-800.png  800w,
+                        assets/images/outreach.png       1086w
+                      "
+                      alt="marketing"
+                      class="delirious-text_image dti-3"
+                    /><img
+                      src="assets/images/clients.png"
+                      loading="eager"
+                      sizes="(max-width: 776px) 100vw, 776px"
+                      srcset="
+                        assets/images/clients-p-500.png 500w,
+                        assets/images/clients.png       776w
+                      "
+                      alt="marketing"
+                      class="delirious-text_image dti-4"
+                    /><img
+                      src="assets/images/socials.png"
+                      loading="eager"
+                      sizes="(max-width: 825px) 100vw, 825px"
+                      srcset="
+                        assets/images/socials-p-500.png 500w,
+                        assets/images/socials.png       825w
+                      "
+                      alt="marketing"
+                      class="delirious-text_image dti-5"
+                    /><img
+                      src="assets/images/finance.png"
+                      loading="eager"
+                      sizes="(max-width: 797px) 100vw, 797px"
+                      srcset="
+                        assets/images/finance-p-500.png 500w,
+                        assets/images/finance.png       797w
+                      "
+                      alt="marketing"
+                      class="delirious-text_image dti-6"
+                    />
+                  </div>
+                </div>
+                <div data-delirious-face="" class="delirious-image">
+                  <div class="delirious-image_wrapper">
+                    <img
+                      src="assets/images/delirious-face.png"
+                      loading="eager"
+                      data-shatter-image=""
+                      alt=""
+                      class="delirious-image_head"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-theme-section="dark" class="dark-section">
+            <div data-drip-bars="" class="drip-bars"></div>
+            <div data-pixel-transition="" class="pixel-transition"></div>
+            <div class="container sg-container">
+              <div class="dark-text_layout">
+                <div
+                  id="w-node-_50a809ed-92ec-de8a-7c6b-14323000d8e2-916fe534"
+                  class="dark-text_wrapper"
+                >
+                  <p
+                    data-split-style="words"
+                    data-split="heading"
+                    class="sg-text-body-large dark-text"
+                  >
+                    You’re doing everything you’re supposed to do. Posting,
+                    emailing, updating the portfolio, trying to stay confident
+                    even when the silence feels like rejection. You see others
+                    growing while you’re here wondering if you’re actually
+                    moving or just pretending. You study the gurus, learn the
+                    systems, try to play the game right, but results never show
+                    up fast enough to calm that voice saying maybe you’re not
+                    good enough. You keep acting like you’ve got direction, even
+                    though you’re figuring it out one shaky step at a time. Some
+                    nights you look at your work and think, what if all this
+                    effort isn’t leading anywhere? But you wake up and do it
+                    again. You still show up. You still believe there’s
+                    something here worth fighting for. And honestly, that tiny
+                    bit of belief is the only reason you haven’t quit.
+                  </p>
+                </div>
+              </div>
+              <div
+                data-pixel-transition-wrapper=""
+                class="dark-illustration_layout"
+              >
+                <div class="dark-illustration_wrapper">
+                  <img
+                    class="dark-illustration"
+                    src="assets/images/man-falling.png"
+                    data-shatter-image=""
+                    alt=""
+                    sizes="(max-width: 1168px) 100vw, 1168px"
+                    data-animation-bop=""
+                    loading="eager"
+                    srcset="
+                      assets/images/man-falling-p-500.png  500w,
+                      assets/images/man-falling-p-800.png  800w,
+                      assets/images/man-falling.png       1168w
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-theme-section="white" class="light-section">
+          <div data-pixel-transition="" class="pixel-transition-padding"></div>
+          <div class="light-layout">
+            <div class="container sg-container">
+              <div data-shift-section="" class="shift-section">
+                <div class="shift-layout">
+                  <div class="shift-text_block-wrapper">
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">But</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">Then,</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">Something</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">Shifts</div>
+                    </div>
+                  </div>
+                  <div class="shift-text_block-wrapper">
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">Not</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">Dramatically,</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">Not</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">All</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">At</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">Once</div>
+                    </div>
+                  </div>
+                  <div class="shift-text_block-wrapper">
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">You</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">Learn</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">To</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">Breathe</div>
+                    </div>
+                    <div data-shift-text-block="" class="shift-text_block">
+                      <div class="sg-text-body-large">Again</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="care-section">
+                <div class="light-svg_layout">
+                  <div class="light-svg_wrapper">
+                    <div class="w-embed">
+                      <svg
+                        data-svg-wrapper=""
+                        style="width: 100%; height: 100%"
+                        viewbox="0 0 1976 6071"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          data-svg-path=""
+                          d="M54.0784 320.178C54.0784 320.178 291.979 167.143 480.241 126.665C1574.4 -108.587 -14.443 1271.02 232.265 1941.77C511.831 2701.86 1767.64 2424.3 1869.6 3196.84C1961.44 3892.65 913.829 3975.39 633.68 4489.92C535.619 4670.02 547.664 4806.66 500.04 5011.44C366.078 5587.48 139.578 6024.98 139.578 6024.98"
+                          stroke="#1A73E8"
+                          stroke-linecap="square"
+                          stroke-width="200"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="care-layout">
+                  <div class="care-text_wrapper right-side">
+                    <div class="care-text">
+                      <div
+                        data-split-style="words"
+                        data-split="heading"
+                        class="sg-text-body-huge care-text_right"
+                      >
+                        You start caring less about being seen and more about
+                        seeing the people who support you, the small wins that
+                        used to go unnoticed.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="care-text_wrapper">
+                    <div class="care-text">
+                      <div
+                        data-split-style="words"
+                        data-split="heading"
+                        class="sg-text-body-huge"
+                      >
+                        You find friends who remind you that the creative path
+                        was never meant to be straight. You realize that growth
+                        isn’t a sprint...
+                      </div>
+                    </div>
+                  </div>
+                  <div class="care-text_wrapper right-side">
+                    <div class="care-text">
+                      <div
+                        data-split-style="words"
+                        data-split="heading"
+                        class="sg-text-body-huge care-text_right"
+                      >
+                        It’s the quiet endurance between failures. You start
+                        finding beauty in the uncertainty, and maybe even
+                        find...
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-theme-section="blue" class="blue-section">
+          <div aria-label="peace" class="peace-section">
+            <div class="peace-layout">
+              <div data-peace-inner="" class="peace-inner_container">
+                <div class="peace-image_wrapper">
+                  <img
+                    src="assets/images/peace.png"
+                    loading="eager"
+                    width="1500"
+                    sizes="100vw"
+                    alt=""
+                    srcset="
+                      assets/images/peace-p-500.png   500w,
+                      assets/images/peace-p-800.png   800w,
+                      assets/images/peace-p-1080.png 1080w,
+                      assets/images/peace-p-1600.png 1600w,
+                      assets/images/peace-p-2000.png 2000w,
+                      assets/images/peace.png        3000w
+                    "
+                    class="peace-image"
+                  />
+                </div>
+                <div class="peace-image_wrapper">
+                  <img
+                    src="assets/images/peace.png"
+                    loading="eager"
+                    width="1500"
+                    sizes="100vw"
+                    alt=""
+                    srcset="
+                      assets/images/peace-p-500.png   500w,
+                      assets/images/peace-p-800.png   800w,
+                      assets/images/peace-p-1080.png 1080w,
+                      assets/images/peace-p-1600.png 1600w,
+                      assets/images/peace-p-2000.png 2000w,
+                      assets/images/peace.png        3000w
+                    "
+                    class="peace-image"
+                  />
+                </div>
+              </div>
+              <div
+                data-peace-inner="2"
+                class="peace-inner_container peace-inner_absolute is-2"
+              >
+                <div class="peace-image_wrapper">
+                  <img
+                    src="assets/images/peace.png"
+                    loading="eager"
+                    width="1500"
+                    sizes="100vw"
+                    alt=""
+                    srcset="
+                      assets/images/peace-p-500.png   500w,
+                      assets/images/peace-p-800.png   800w,
+                      assets/images/peace-p-1080.png 1080w,
+                      assets/images/peace-p-1600.png 1600w,
+                      assets/images/peace-p-2000.png 2000w,
+                      assets/images/peace.png        3000w
+                    "
+                    class="peace-image"
+                  />
+                </div>
+                <div class="peace-image_wrapper">
+                  <img
+                    src="assets/images/peace.png"
+                    loading="eager"
+                    width="1500"
+                    sizes="100vw"
+                    alt=""
+                    srcset="
+                      assets/images/peace-p-500.png   500w,
+                      assets/images/peace-p-800.png   800w,
+                      assets/images/peace-p-1080.png 1080w,
+                      assets/images/peace-p-1600.png 1600w,
+                      assets/images/peace-p-2000.png 2000w,
+                      assets/images/peace.png        3000w
+                    "
+                    class="peace-image"
+                  />
+                </div>
+              </div>
+              <div
+                data-peace-inner="3"
+                class="peace-inner_container peace-inner_absolute is-3"
+              >
+                <div class="peace-image_wrapper">
+                  <img
+                    src="assets/images/peace.png"
+                    loading="eager"
+                    width="1500"
+                    sizes="100vw"
+                    alt=""
+                    srcset="
+                      assets/images/peace-p-500.png   500w,
+                      assets/images/peace-p-800.png   800w,
+                      assets/images/peace-p-1080.png 1080w,
+                      assets/images/peace-p-1600.png 1600w,
+                      assets/images/peace-p-2000.png 2000w,
+                      assets/images/peace.png        3000w
+                    "
+                    class="peace-image"
+                  />
+                </div>
+                <div class="peace-image_wrapper">
+                  <img
+                    src="assets/images/peace.png"
+                    loading="eager"
+                    width="1500"
+                    sizes="100vw"
+                    alt=""
+                    srcset="
+                      assets/images/peace-p-500.png   500w,
+                      assets/images/peace-p-800.png   800w,
+                      assets/images/peace-p-1080.png 1080w,
+                      assets/images/peace-p-1600.png 1600w,
+                      assets/images/peace-p-2000.png 2000w,
+                      assets/images/peace.png        3000w
+                    "
+                    class="peace-image"
+                  />
+                </div>
+              </div>
+              <div
+                data-peace-inner="4"
+                class="peace-inner_container peace-inner_absolute is-4"
+              >
+                <div class="peace-image_wrapper">
+                  <img
+                    src="assets/images/peace.png"
+                    loading="eager"
+                    width="1500"
+                    sizes="100vw"
+                    alt=""
+                    srcset="
+                      assets/images/peace-p-500.png   500w,
+                      assets/images/peace-p-800.png   800w,
+                      assets/images/peace-p-1080.png 1080w,
+                      assets/images/peace-p-1600.png 1600w,
+                      assets/images/peace-p-2000.png 2000w,
+                      assets/images/peace.png        3000w
+                    "
+                    class="peace-image"
+                  />
+                </div>
+                <div class="peace-image_wrapper">
+                  <img
+                    src="assets/images/peace.png"
+                    loading="eager"
+                    width="1500"
+                    sizes="100vw"
+                    alt=""
+                    srcset="
+                      assets/images/peace-p-500.png   500w,
+                      assets/images/peace-p-800.png   800w,
+                      assets/images/peace-p-1080.png 1080w,
+                      assets/images/peace-p-1600.png 1600w,
+                      assets/images/peace-p-2000.png 2000w,
+                      assets/images/peace.png        3000w
+                    "
+                    class="peace-image"
+                  />
+                </div>
+              </div>
+              <div
+                data-peace-inner="5"
+                class="peace-inner_container peace-inner_absolute is-5"
+              >
+                <div class="peace-image_wrapper">
+                  <img
+                    src="assets/images/peace.png"
+                    loading="eager"
+                    width="1500"
+                    sizes="100vw"
+                    alt=""
+                    srcset="
+                      assets/images/peace-p-500.png   500w,
+                      assets/images/peace-p-800.png   800w,
+                      assets/images/peace-p-1080.png 1080w,
+                      assets/images/peace-p-1600.png 1600w,
+                      assets/images/peace-p-2000.png 2000w,
+                      assets/images/peace.png        3000w
+                    "
+                    class="peace-image"
+                  />
+                </div>
+                <div class="peace-image_wrapper">
+                  <img
+                    src="assets/images/peace.png"
+                    loading="eager"
+                    width="1500"
+                    sizes="100vw"
+                    alt=""
+                    srcset="
+                      assets/images/peace-p-500.png   500w,
+                      assets/images/peace-p-800.png   800w,
+                      assets/images/peace-p-1080.png 1080w,
+                      assets/images/peace-p-1600.png 1600w,
+                      assets/images/peace-p-2000.png 2000w,
+                      assets/images/peace.png        3000w
+                    "
+                    class="peace-image"
+                  />
+                </div>
+              </div>
+              <div class="peace-star">
+                <div class="w-embed">
+                  <svg
+                    style="width: 100%; aspect-ratio: 1/1"
+                    viewbox="0 0 69 69"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M34.5 0C34.5 0 36.4035 17.7673 43.8181 25.1819C51.2327 32.5965 69 34.5 69 34.5C69 34.5 51.2327 36.4035 43.8181 43.8181C36.4035 51.2327 34.5 69 34.5 69C34.5 69 32.5965 51.2327 25.1819 43.8181C17.7673 36.4035 0 34.5 0 34.5C0 34.5 17.7673 32.5965 25.1819 25.1819C32.5965 17.7673 34.5 0 34.5 0Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="motivational-section">
+            <div class="container">
+              <div class="motivational-layout">
+                <div
+                  data-split="heading"
+                  class="sg-text-body-large motivational-text"
+                >
+                  And so, you keep going. You stop waiting for clarity and start
+                  walking anyway. You learn that direction comes slowly, like
+                  light in the morning, you don’t notice it until it’s there.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="trying-section">
+            <div class="container trying-container">
+              <div class="trying-layout">
+                <div
+                  id="w-node-_0810dca9-a1c7-55a6-a495-a1fdf8e84dc7-916fe534"
+                  class="typing-word_grid"
+                >
+                  <div
+                    id="w-node-_1d743d20-2750-fc64-dbf6-09836b8801c6-916fe534"
+                    class="trying-word word--you"
+                  >
+                    <div class="code-embed w-embed">
+                      <svg
+                        style="width: 100%"
+                        viewbox="0 0 304 118"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M58.2472 115.701H40.6302V70.3093L0 2.22196H18.8867L49.3594 56.5014H49.6768L80.1494 2.22196H98.8774L58.2472 70.3093V115.701Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M148.079 117.923C114.115 117.923 92.3715 93.0051 92.3715 58.8821C92.3715 24.759 114.115 0 148.079 0C182.044 0 203.787 24.759 203.787 58.8821C203.787 93.0051 182.044 117.923 148.079 117.923ZM148.079 102.845C174.902 102.845 185.535 82.2127 185.535 58.8821C185.535 35.5514 174.902 15.0776 148.079 15.0776C121.257 15.0776 110.623 35.5514 110.623 58.8821C110.623 82.2127 121.257 102.845 148.079 102.845Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M259.561 117.923C228.453 117.923 215.28 101.576 215.28 77.1339V2.22196H232.738V77.1339C232.738 94.7509 241.626 102.845 259.561 102.845C277.654 102.845 286.383 94.7509 286.383 77.1339V2.22196H304V77.1339C304 101.576 290.827 117.923 259.561 117.923Z"
+                          fill="white"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    id="w-node-dffd6e26-5b05-5a41-85e5-72b7c01fa133-916fe534"
+                    class="trying-word word--stop"
+                  >
+                    <div class="w-embed">
+                      <svg
+                        style="width: 100%"
+                        viewbox="0 0 1375 422"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M179.426 421.877C76.6533 421.877 4.54242 368.504 0 277.088H64.7295C69.2719 331.597 101.637 368.504 177.722 368.504C243.019 368.504 262.893 340.114 262.893 303.206C262.893 251.536 223.146 244.155 149.332 225.418C85.7382 208.383 15.8985 187.943 15.8985 110.721C15.8985 40.314 70.4075 0 157.849 0C250.401 0 310.588 47.1276 316.834 128.891H252.104C245.291 80.0602 217.468 53.3734 158.417 53.3734C107.315 53.3734 81.1957 72.1109 81.1957 107.315C81.1957 152.739 123.781 162.391 176.019 175.451C254.375 195.324 328.19 214.061 328.19 299.8C328.19 369.639 281.062 421.877 179.426 421.877Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M513.058 413.928H450.032V61.8905H318.87V7.94923H644.221V61.8905H513.058V413.928Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M829.675 421.877C708.165 421.877 630.376 332.732 630.376 210.655C630.376 88.5772 708.165 0 829.675 0C951.184 0 1028.97 88.5772 1028.97 210.655C1028.97 332.732 951.184 421.877 829.675 421.877ZM829.675 367.936C925.633 367.936 963.676 294.122 963.676 210.655C963.676 127.188 925.633 53.9412 829.675 53.9412C733.716 53.9412 695.673 127.188 695.673 210.655C695.673 294.122 733.716 367.936 829.675 367.936Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M1135.39 413.928H1072.93V7.94923H1242.13C1318.79 7.94923 1375 43.7208 1375 128.891C1375 214.061 1318.79 249.265 1242.13 249.265H1135.39V413.928ZM1135.39 195.324H1239.3C1286.42 195.324 1310.27 174.315 1310.27 128.891C1310.27 82.8992 1286.42 61.8905 1239.3 61.8905H1135.39V195.324Z"
+                          fill="white"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="typing-word_grid">
+                  <div
+                    id="w-node-_8780ce8c-363e-959a-991a-fdb3074bb8d7-916fe534"
+                    class="trying-word word--trying"
+                  >
+                    <div class="w-embed">
+                      <svg
+                        style="width: 100%"
+                        viewbox="0 0 610 136"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M62.1623 132.504H41.9868V19.812H0V2.54465H104.149V19.812H62.1623V132.504Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M134.238 132.504H114.244V2.54465H168.409C197.127 2.54465 212.577 15.995 212.577 39.9874C212.577 56.5277 202.58 68.5239 188.221 71.7956V72.1591C218.393 77.7937 207.306 129.05 214.394 131.231V132.504H192.946C187.13 127.051 199.49 81.6107 167.682 81.6107H134.238V132.504ZM134.238 64.3434H164.046C182.404 64.3434 192.401 56.3459 192.401 41.4415C192.401 27.4459 184.404 19.812 164.41 19.812H134.238V64.3434Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M277.82 132.504H257.645V80.5201L211.114 2.54465H232.744L267.642 64.7069H268.005L302.903 2.54465H324.351L277.82 80.5201V132.504Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M353.018 132.504H333.025V2.54465H353.018V132.504Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M393.361 132.504H373.367V2.54465H396.269L456.614 102.513H456.977V2.54465H477.153V132.504H454.251L393.724 32.5352H393.361V132.504Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M549.837 135.048C512.394 135.048 491.31 106.694 491.31 67.4333C491.31 28.3547 515.121 0 552.2 0C585.826 0 603.638 17.9943 607.819 42.7138H586.916C583.463 26.3553 571.285 17.2673 552.018 17.2673C523.3 17.2673 512.213 43.0774 512.213 67.4333C512.213 91.9711 520.574 117.781 550.928 117.781C572.375 117.781 589.461 102.877 589.643 81.2472H551.291V64.5252H610V132.504H596.186L591.279 114.509H590.915C581.827 127.778 569.649 135.048 549.837 135.048Z"
+                          fill="white"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="w-node-c5282358-ca46-5396-6289-07ee1921b7d9-916fe534"
+                  class="typing-word_grid"
+                >
+                  <div
+                    id="w-node-_5294d1a2-2522-f1d1-68f0-7b719293b9a8-916fe534"
+                    class="trying-word word--trying"
+                  >
+                    <div class="w-embed">
+                      <svg
+                        style="width: 100%"
+                        viewbox="0 0 309 184"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M84.3546 179.808H56.9764V26.885H0V3.45311H141.331V26.885H84.3546V179.808Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M221.891 183.262C169.108 183.262 135.317 144.537 135.317 91.5075C135.317 38.4775 169.108 0 221.891 0C274.675 0 308.466 38.4775 308.466 91.5075C308.466 144.537 274.675 183.262 221.891 183.262ZM221.891 159.83C263.575 159.83 280.101 127.765 280.101 91.5075C280.101 55.2498 263.575 23.4318 221.891 23.4318C180.207 23.4318 163.682 55.2498 163.682 91.5075C163.682 127.765 180.207 159.83 221.891 159.83Z"
+                          fill="white"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="w-node-_82c5c2e4-eb58-de6a-475f-bfe9724e7a0e-916fe534"
+                  class="typing-word_grid flex-too"
+                >
+                  <div
+                    id="w-node-_1baf7ddd-06b7-a457-27d2-3e9cde00c33a-916fe534"
+                    class="trying-word word--fix"
+                  >
+                    <div class="w-embed">
+                      <svg
+                        style="width: 100%"
+                        viewbox="0 0 453 248"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M38.1273 247.827H0V0H171.919V32.9281H38.1273V107.45H146.27V140.378H38.1273V247.827Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M230.145 247.827H192.018V0H230.145V247.827Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M287.666 247.827H242.953L326.833 121.314L248.846 0H291.132L348.67 93.5852H349.016L406.901 0H448.841L370.853 120.621L453 247.827H408.634L347.977 149.043H347.63L287.666 247.827Z"
+                          fill="white"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    id="w-node-_7004fc89-dd76-851a-f0e9-5d0d5ac00e78-916fe534"
+                    class="typing-word_mini-grid"
+                  >
+                    <div class="trying-word word--and">
+                      <div class="w-embed">
+                        <svg
+                          style="width: 100%"
+                          viewbox="0 0 918 119"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M82.2495 116.201H0V2.23158H80.6556V17.3744H17.5338V49.7323H72.845V64.8751H17.5338V101.059H82.2495V116.201Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M141.909 116.201H122.941L82.7726 2.23158H102.06L132.345 97.7112H132.505L162.631 2.23158H181.121L141.909 116.201Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M271.467 116.201H189.217V2.23158H269.873V17.3744H206.751V49.7323H262.062V64.8751H206.751V101.059H271.467V116.201Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M300.659 116.201H283.125V2.23158H330.626C355.811 2.23158 369.36 14.0271 369.36 35.0676C369.36 49.5729 360.593 60.0932 348 62.9623V63.2811C374.46 68.2225 364.737 113.173 370.954 115.086V116.201H352.145C347.044 111.419 357.883 71.5699 329.988 71.5699H300.659V116.201ZM300.659 56.427H326.8C342.899 56.427 351.666 49.4135 351.666 36.3428C351.666 24.0692 344.653 17.3744 327.119 17.3744H300.659V56.427Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M426.576 116.201H408.883V70.6135L368.077 2.23158H387.045L417.65 56.7458H417.969L448.573 2.23158H467.382L426.576 70.6135V116.201Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M520.576 116.201H502.883V17.3744H466.062V2.23158H557.397V17.3744H520.576V116.201Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M583.784 116.201H566.25V2.23158H583.784V49.8917H639.733V2.23158H657.426V116.201H639.733V65.0345H583.784V116.201Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M692.636 116.201H675.102V2.23158H692.636V116.201Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M728.015 116.201H710.481V2.23158H730.565L783.485 89.9007H783.804V2.23158H801.497V116.201H781.413L728.333 28.5323H728.015V116.201Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M865.239 118.433C832.403 118.433 813.913 93.5668 813.913 59.1368C813.913 24.8661 834.794 0 867.311 0C896.8 0 912.421 15.7804 916.087 37.4586H897.756C894.728 23.1128 884.048 15.1428 867.152 15.1428C841.967 15.1428 832.244 37.7774 832.244 59.1368C832.244 80.6556 839.576 103.29 866.195 103.29C885.004 103.29 899.988 90.2195 900.147 71.2511H866.514V56.5864H918V116.201H905.886L901.582 100.421H901.263C893.293 112.057 882.613 118.433 865.239 118.433Z"
+                            fill="white"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      id="w-node-_68965f34-fbb1-93f2-e13a-74c6603bab82-916fe534"
+                      class="typing-word_instead"
+                    >
+                      <div class="trying-word word--instead">
+                        <div class="w-embed">
+                          <svg
+                            style="width: 100%"
+                            viewbox="0 0 127 46"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.424 45.76H0L17.024 0H24.64L41.792 45.76H34.112L30.336 34.752H11.2L7.424 45.76ZM20.736 6.528L13.312 28.8H28.352L20.864 6.528H20.736Z"
+                              fill="white"
+                            ></path>
+                            <path
+                              d="M51.658 45.76H44.618V0H52.682L73.93 35.2H74.058V0H81.162V45.76H73.098L51.786 10.56H51.658V45.76Z"
+                              fill="white"
+                            ></path>
+                            <path
+                              d="M105.859 45.76H88.323V0H105.731C118.403 0 126.083 8.192 126.083 22.912C126.083 37.632 118.531 45.76 105.859 45.76ZM95.363 39.68H105.411C116.035 39.68 118.787 31.744 118.787 22.912C118.787 14.08 116.035 6.08 105.411 6.08H95.363V39.68Z"
+                              fill="white"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        id="w-node-_79422711-a08e-2eb5-12ab-e2b0d3825c86-916fe534"
+                        class="trying-word word--everything"
+                      >
+                        <div class="w-embed">
+                          <svg
+                            style="width: 100%"
+                            viewbox="0 0 247 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.04 46.656H0V0.896H7.04V46.656Z"
+                              fill="white"
+                            ></path>
+                            <path
+                              d="M21.245 46.656H14.205V0.896H22.269L43.517 36.096H43.645V0.896H50.749V46.656H42.685L21.373 11.456H21.245V46.656Z"
+                              fill="white"
+                            ></path>
+                            <path
+                              d="M75.126 47.552C63.542 47.552 55.414 41.536 54.902 31.232H62.198C62.71 37.376 66.358 41.536 74.934 41.536C82.294 41.536 84.534 38.336 84.534 34.176C84.534 28.352 80.054 27.52 71.734 25.408C64.566 23.488 56.694 21.184 56.694 12.48C56.694 4.544 62.838 0 72.694 0C83.126 0 89.91 5.312 90.614 14.528H83.318C82.55 9.024 79.414 6.016 72.758 6.016C66.998 6.016 64.054 8.128 64.054 12.096C64.054 17.216 68.854 18.304 74.742 19.776C83.574 22.016 91.894 24.128 91.894 33.792C91.894 41.664 86.582 47.552 75.126 47.552Z"
+                              fill="white"
+                            ></path>
+                            <path
+                              d="M112.731 46.656H105.627V6.976H90.8435V0.896H127.515V6.976H112.731V46.656Z"
+                              fill="white"
+                            ></path>
+                            <path
+                              d="M164.094 46.656H131.07V0.896H163.454V6.976H138.11V19.968H160.318V26.048H138.11V40.576H164.094V46.656Z"
+                              fill="white"
+                            ></path>
+                            <path
+                              d="M171.911 46.656H164.487L181.511 0.896H189.127L206.279 46.656H198.599L194.823 35.648H175.687L171.911 46.656ZM185.223 7.424L177.799 29.696H192.839L185.351 7.424H185.223Z"
+                              fill="white"
+                            ></path>
+                            <path
+                              d="M226.641 46.656H209.105V0.896H226.513C239.185 0.896 246.865 9.088 246.865 23.808C246.865 38.528 239.313 46.656 226.641 46.656ZM216.145 40.576H226.193C236.817 40.576 239.569 32.64 239.569 23.808C239.569 14.976 236.817 6.976 226.193 6.976H216.145V40.576Z"
+                              fill="white"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="time-section">
+            <div class="time-clock_layout">
+              <div class="time-clock_wrapper">
+                <div class="time-clock_embed w-embed">
+                  <svg
+                    class="clock-svg"
+                    viewbox="-1000 -1000 2000 2000"
+                    preserveaspectratio="xMidYMid slice"
+                  >
+                    <defs>
+                      <filter id="ink-texture">
+                        <feturbulence
+                          type="fractalNoise"
+                          basefrequency="0.8"
+                          numoctaves="3"
+                          result="noise"
+                        ></feturbulence>
+                        <fedisplacementmap
+                          in="SourceGraphic"
+                          in2="noise"
+                          scale="4"
+                        ></fedisplacementmap>
+                      </filter>
+                    </defs>
+                    <g id="spiral-group" filter="url(#ink-texture)"></g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="time-content_layout">
+              <div class="container sg-container">
+                <div class="time-content_wrapper">
+                  <div
+                    data-split="custom"
+                    id="w-node-_60035cec-f762-ec3a-b5e7-5d830c83f871-916fe534"
+                    class="sg-text-body-huge time-text"
+                  >
+                    LET TIME DO
+                  </div>
+                  <div
+                    data-split="custom"
+                    id="w-node-d1a5963c-78fb-72df-ce01-fd2b5961215f-916fe534"
+                    class="sg-text-body-huge time-text"
+                  >
+                    WHAT IT DOES
+                  </div>
+                  <div
+                    data-split="custom"
+                    id="w-node-_2c428f3d-554b-3c68-0504-dba36a3491f3-916fe534"
+                    class="sg-text-body-huge time-text"
+                  >
+                    BEST
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="align-section">
+            <div class="container sg-container">
+              <div class="align-layout">
+                <div class="align-wrapper">
+                  <div
+                    data-split-style="chars"
+                    data-split="heading"
+                    id="w-node-_73511162-13f1-5223-7d31-553beb64539d-916fe534"
+                    class="sg-text-display align-text"
+                  >
+                    SOFTEN
+                  </div>
+                  <div
+                    data-split-style="chars"
+                    data-split="heading"
+                    id="w-node-_697f091a-4352-5612-321a-10e45a50b50c-916fe534"
+                    class="sg-text-display align-text"
+                  >
+                    REVEAL
+                  </div>
+                  <div
+                    data-split-style="chars"
+                    data-split="heading"
+                    id="w-node-_9eadf229-07bd-4a3f-08f1-865c5d0096bb-916fe534"
+                    class="sg-text-display align-text"
+                  >
+                    ALIGN
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="white-padding"></div>
+        </div>
+        <div data-theme-section="white" class="light-section">
+          <div class="white-padding"></div>
+          <section data-sticky-title="wrap" class="sticky-title-wrapper">
+            <div class="sticky-title-container">
+              <div class="sticky-title-inner">
+                <h1 data-sticky-title="heading" class="sg-text-body-huge">
+                  But maybe that’s the<br />whole point
+                </h1>
+                <h2
+                  data-sticky-title="heading"
+                  class="sg-text-body-huge is--stacked"
+                >
+                  Maybe direction<br />isn’t found
+                </h2>
+                <h2
+                  data-sticky-title="heading"
+                  class="sg-text-body-huge is--stacked"
+                >
+                  Maybe it forms under your feet as you keep walking
+                </h2>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div data-theme-section="grey-black" class="grey-section-footer">
+          <footer class="footer-layout">
+            <div class="container sg-container footer-container">
+              <div class="footer-grid">
+                <div
+                  id="w-node-_9622c26e-d471-0803-e41d-4295bf39fc44-916fe534"
+                  class="footer-text_wrapper"
+                >
+                  <div class="sg-text-body-huge">JUST KEEP</div>
+                  <img
+                    class="footer-text_image"
+                    src="assets/images/walking.png"
+                    data-shatter-image=""
+                    alt="Directionless"
+                    sizes="(max-width: 1750px) 100vw, 1750px"
+                    loading="eager"
+                    srcset="
+                      assets/images/walking-p-500.png   500w,
+                      assets/images/walking-p-800.png   800w,
+                      assets/images/walking-p-1080.png 1080w,
+                      assets/images/walking.png        1750w
+                    "
+                  />
+                </div>
+                <div
+                  id="w-node-_654a34dc-0662-34c6-0cb5-e601afc32904-916fe534"
+                  class="sg-text-body-mini"
+                >
+                  We created this project as an outpouring of our present
+                  predicament. Hopefully it resonated with you. If are currently
+                  going through a similar time, just know it gets better.<br /><br />Tatakae!
+                </div>
+                <div
+                  id="w-node-_978983bd-25a2-9831-79a8-b87a90fad9b3-916fe534"
+                  class="footer-links"
+                >
+                  <a
+                    data-underline-link=""
+                    href="https://www.instagram.com/ac-dc/"
+                    target="_blank"
+                    class="footer-social-link w-inline-block"
+                    ><div
+                      aria-label="staggering button"
+                      class="btn-animate-chars"
+                    >
+                      <div
+                        class="btn-animate-chars__bg sg-text-body-mini"
+                      ></div>
+                      <span
+                        data-button-animate-chars=""
+                        class="btn-animate-chars__text sg-text-body-mini"
+                        >instagram</span
+                      >
+                    </div>
+                    <div class="footer-arrow">
+                      <div class="footer-arrow_svg-wrapper is--1 w-embed">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewbox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="footer-arrow_svg-wrapper is--2 w-embed">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewbox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div></div></a
+                  ><a
+                    data-underline-link=""
+                    href="https://www.linkedin.com/in/ac-dc/"
+                    target="_blank"
+                    class="footer-social-link w-inline-block"
+                    ><div
+                      aria-label="staggering button"
+                      class="btn-animate-chars"
+                    >
+                      <div
+                        class="btn-animate-chars__bg sg-text-body-mini"
+                      ></div>
+                      <span
+                        data-button-animate-chars=""
+                        class="btn-animate-chars__text sg-text-body-mini"
+                        >linkedin</span
+                      >
+                    </div>
+                    <div class="footer-arrow">
+                      <div class="footer-arrow_svg-wrapper is--1 w-embed">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewbox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="footer-arrow_svg-wrapper is--2 w-embed">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewbox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div></div></a
+                  ><a
+                    data-underline-link=""
+                    href="https://x.com/ac-dc"
+                    target="_blank"
+                    class="footer-social-link w-inline-block"
+                    ><div
+                      aria-label="staggering button"
+                      class="btn-animate-chars"
+                    >
+                      <div
+                        class="btn-animate-chars__bg sg-text-body-mini"
+                      ></div>
+                      <span
+                        data-button-animate-chars=""
+                        class="btn-animate-chars__text sg-text-body-mini"
+                        >x (twitter)</span
+                      >
+                    </div>
+                    <div class="footer-arrow">
+                      <div class="footer-arrow_svg-wrapper is--1 w-embed">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewbox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="footer-arrow_svg-wrapper is--2 w-embed">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewbox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div></div></a
+                  ><a
+                    data-underline-link=""
+                    href="mailto:contact@ac-dc.com"
+                    class="footer-social-link w-inline-block"
+                    ><div
+                      aria-label="staggering button"
+                      class="btn-animate-chars"
+                    >
+                      <div
+                        class="btn-animate-chars__bg sg-text-body-mini"
+                      ></div>
+                      <span
+                        data-button-animate-chars=""
+                        class="btn-animate-chars__text sg-text-body-mini"
+                        >email me</span
+                      >
+                    </div>
+                    <div class="footer-arrow">
+                      <div class="footer-arrow_svg-wrapper is--1 w-embed">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewbox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="footer-arrow_svg-wrapper is--2 w-embed">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewbox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                </div>
+                <div
+                  id="w-node-_06e89925-3fd9-4119-2731-052d7a5b24fb-916fe534"
+                  class="footer-ref"
+                >
+                  <div class="sg-text-body-mini">
+                    Designed &amp; Developed By
+                    <a
+                      href="https://ac-dc.com"
+                      data-underline-link="alt"
+                      target="_blank"
+                      class="link"
+                      >AC-DC team</a
+                    >
+                  </div>
+                </div>
+                <div
+                  id="w-node-_6a556f5a-5486-c8c7-e1f1-eb8ae68f4d23-916fe534"
+                  class="sg-text-body-mini just-keep-text"
+                >
+                  Just Keep Walking...
+                </div>
+                <div
+                  id="w-node-_5d47466d-a390-1438-c40d-ea5645b3aa2a-916fe534"
+                  class="sg-text-body-mini"
+                >
+                  © 2026. All Rights Reserved
+                </div>
+                <img
+                  class="footer-image-drowning"
+                  src="assets/images/man-drowning.png"
+                  data-shatter-image=""
+                  width="1200"
+                  alt=""
+                  sizes="100vw"
+                  data-animation-bop="4"
+                  id="w-node-dd4e005b-ba70-51f5-3c76-dbcfa02fd35b-916fe534"
+                  loading="eager"
+                  srcset="
+                    assets/images/man-drowning-p-500.png   500w,
+                    assets/images/man-drowning-p-800.png   800w,
+                    assets/images/man-drowning-p-1080.png 1080w,
+                    assets/images/man-drowning.png        2400w
+                  "
+                />
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div data-load-bg="" class="loader-wrapper">
+      <div class="container sg-container">
+        <div data-load-container="" class="loader-layout">
+          <div class="sg-text-body-small loader-text">Directionless</div>
+          <div class="sg-text-body-small loader-text loader-text-2">
+            Loading...
+          </div>
+          <div class="loader-img_wrapper is--base">
+            <img
+              src="assets/images/loader-image.png"
+              loading="eager"
+              sizes="100vw"
+              srcset="
+                assets/images/loader-image-p-500.png   500w,
+                assets/images/loader-image-p-800.png   800w,
+                assets/images/loader-image-p-1080.png 1080w,
+                assets/images/loader-image-p-1600.png 1600w,
+                assets/images/loader-image-p-2000.png 2000w,
+                assets/images/loader-image.png        3900w
+              "
+              alt=""
+              class="image"
+            />
+          </div>
+          <div data-load-logo="" class="loader-img_wrapper is--top">
+            <img
+              src="assets/images/loader-image.png"
+              loading="eager"
+              sizes="100vw"
+              srcset="
+                assets/images/loader-image-p-500.png   500w,
+                assets/images/loader-image-p-800.png   800w,
+                assets/images/loader-image-p-1080.png 1080w,
+                assets/images/loader-image-p-1600.png 1600w,
+                assets/images/loader-image-p-2000.png 2000w,
+                assets/images/loader-image.png        3900w
+              "
+              alt=""
+              class="image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="js/jquery.min.js?site=assets"
+      type="text/javascript"
+    ></script>
+    <script
+      src="assets/js/main.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
