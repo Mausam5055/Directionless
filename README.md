@@ -23,7 +23,9 @@
 
 ## 📖 Overview
 
-This project is a highly optimized, modularized web experience. Originally a monolithic architecture, the codebase has been aggressively refactored into a scalable component-based structure using a custom Vite HTML plugin, segmented CSS modules, and isolated third-party engine scripts. It utilizes high-performance animation libraries alongside robust modular TypeScript logic to deliver a flawless 60fps experience.
+The primary goal of this platform is to identify underlying emotional barriers and design innovative solutions that encourage individuals to seek timely healthcare support for depression. By leveraging an immersive, high-performance animated web experience, the project breaks down stigmas and creates a visually engaging, empathetic environment.
+
+Behind the scenes, this highly interactive experience is powered by a robust modular architecture utilizing custom Vite plugins, segmented CSS, isolated engine scripts, and type-safe TypeScript logic to deliver a flawless 60fps emotional journey.
 
 ---
 
