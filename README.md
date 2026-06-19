@@ -121,9 +121,9 @@ The repository relies on a strictly typed, modular architecture designed for rap
 
 This architectural refinement and project evolution is proudly authored and maintained by:
 
+- **Rachit Tiwari**
 - **Mausam Kar**
 - **Sheikh Mohammad Warsi**
-- **Rachit Tiwari**
 
 ---
 
