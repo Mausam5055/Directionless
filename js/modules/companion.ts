@@ -78,7 +78,7 @@ You are not here to impress. You are here to listen. That's it.`,
   injectModalMarkup() {
     const modalHtml = `
       <div id="companion-modal" class="wellbeing-quiz-overlay" role="dialog" aria-modal="true">
-        <div class="wellbeing-quiz-container companion-container" style="position: relative; overflow: hidden;">
+        <div class="wellbeing-quiz-container companion-container" data-lenis-prevent="true" style="position: relative; overflow: hidden;">
           <canvas id="dot-wave-canvas" class="dot-wave-canvas"></canvas>
           <button class="quiz-close-btn companion-close-btn" aria-label="Close Companion" style="z-index: 10;">&times;</button>
           
@@ -93,7 +93,7 @@ You are not here to impress. You are here to listen. That's it.`,
           </div>
 
           <div class="companion-content-wrapper">
-            <div id="chat-messages" class="chat-messages">
+            <div id="chat-messages" class="chat-messages" data-lenis-prevent="true">
               <div class="chat-message bot">
                 <div class="chat-avatar">
                   <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
