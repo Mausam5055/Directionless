@@ -31,7 +31,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        contact: './contact.html'
+        contact: './contact.html',
+        chat: './chat.html'
       }
     }
   }

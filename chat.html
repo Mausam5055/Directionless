@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>COMPANION | Directionless</title>
+    <meta name="description" content="A private AI companion that listens" />
+    <meta name="robots" content="index, follow" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/chat.css" rel="stylesheet" type="text/css" />
+    <link href="assets/images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="assets/images/logo256.png" rel="apple-touch-icon" />
+    <style>
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;color:inherit;text-underline-offset:2px}
+      :root{--size-unit:16;--size-container-ideal:1728;--size-container-min:992px;--size-container-max:1920px;--size-container:clamp(var(--size-container-min),100vw,var(--size-container-max));--size-font:calc(var(--size-container) / (var(--size-container-ideal) / var(--size-unit)));--black:#121212;--light:#fff;--dark:#1e1e1e;--grey:#f4f4f4;--lightBlue:#1a73e8;--dark-grey:#dfdfdf;--darker-grey:#6c6c6c;--blue:#514cf5}
+      @media screen and (max-width: 991px){:root{--size-container-ideal:768;--size-container-min:768px;--size-container-max:991px}}
+      @media screen and (max-width: 767px){:root{--size-container-ideal:550;--size-container-min:480px;--size-container-max:767px}}
+      @media screen and (max-width: 479px){:root{--size-container-ideal:402;--size-container-min:320px;--size-container-max:479px}}
+      body{transition:background-color 350ms ease,color 350ms ease;font-size:var(--size-font);color:var(--dark)}
+      [data-theme="light"]{background-color:var(--grey);color:var(--dark)}
+      [data-theme="grey"]{background-color:var(--dark-grey);color:var(--dark)}
+      [data-theme="grey-black"]{background-color:var(--grey);color:var(--black)}
+      [data-theme="dark"]{background-color:var(--black);color:var(--grey)}
+      [data-theme="white"]{background-color:var(--light);color:var(--black)}
+      [data-theme="blue"]{background-color:var(--lightBlue);color:var(--light)}
+      [data-theme="saturated"]{background-color:var(--blue);color:var(--light)}
+      .container{max-width:var(--size-container)}.container.medium{max-width:calc(var(--size-container) * 0.85)}.container.small{max-width:calc(var(--size-container) * 0.7)}
+      [data-underline-link]{text-decoration:none;position:relative}
+      [data-underline-link]::before{content:"";position:absolute;bottom:-0.0625em;left:0;width:100%;height:0.0625em;background-color:currentColor;transition:transform 0.5s cubic-bezier(0.625, 0.05, 0, 1);transform-origin:right;transform:scaleX(0) rotate(0.001deg)}
+      @media (hover: hover) and (pointer: fine){[data-underline-link]:hover::before{transform-origin:left;transform:scaleX(1) rotate(0.001deg)}}
+      html,body{scrollbar-width:none}html::-webkit-scrollbar,body::-webkit-scrollbar{width:0;height:0}
+    </style>
+  </head>
+  <body data-theme="light" class="body">
+    <div class="chat-page">
+      <div class="chat-section">
+        <div class="chat-header">
+          <a href="index.html" data-underline-link class="chat-back sg-text-body-mini">&larr; back</a>
+          <div class="chat-header-info">
+            <h1 class="sg-text-body-huge chat-title">COMPANION</h1>
+            <p class="sg-text-body-mini chat-subtitle">A quiet space. Just you and someone who listens.</p>
+          </div>
+          <div class="chat-privacy-badge sg-text-body-mini">
+            <svg width="14" height="14" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 8H17V6C17 3.24 14.76 1 12 1S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2ZM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6Z" fill="currentColor"/>
+            </svg>
+            end-to-end private
+          </div>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+          <div class="chat-message bot">
+            <div class="chat-avatar">
+              <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Z" fill="currentColor" opacity="0.3"/>
+                <path d="M12 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2Zm0 10c-2.7 0-5.8 1.29-6 2h12c-.2-.71-3.3-2-6-2Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="chat-bubble">
+              <p>Hey. I'm here. No judgment, no agenda — just a quiet place to put down what you're carrying. Tell me what's on your mind, or don't. I'll be right here either way.</p>
+            </div>
+          </div>
+        </div>
+        <div class="chat-input-bar">
+          <div class="chat-input-wrapper">
+            <textarea id="chat-input" class="chat-input" rows="1" placeholder="Type what's on your mind..." maxlength="2000"></textarea>
+            <button id="chat-send" class="chat-send-btn" aria-label="Send">
+              <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5621 6V15.75C18.5621 15.8992 18.5029 16.0423 18.3974 16.1477C18.2919 16.2532 18.1488 16.3125 17.9996 16.3125C17.8505 16.3125 17.7074 16.2532 17.6019 16.1477C17.4964 16.0423 17.4371 15.8992 17.4371 15.75V7.3575L6.39714 18.3975C6.29051 18.4969 6.14947 18.551 6.00375 18.5484C5.85802 18.5458 5.71898 18.4868 5.61592 18.3837C5.51286 18.2807 5.45383 18.1416 5.45126 17.9959C5.44869 17.8502 5.50278 17.7091 5.60214 17.6025L16.6421 6.5625H8.24964C8.10046 6.5625 7.95738 6.50324 7.85189 6.39775C7.7464 6.29226 7.68714 6.14918 7.68714 6C7.68714 5.85082 7.7464 5.70774 7.85189 5.60225C7.95738 5.49676 8.10046 5.4375 8.24964 5.4375H17.9996C18.1488 5.4375 18.2919 5.49676 18.3974 5.60225C18.5029 5.70774 18.5621 5.85082 18.5621 6Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
+          <p class="chat-footnote sg-text-body-mini">Everything you say stays between you and this browser. No data saved. No one watching.</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="js/chat.js"></script>
+  </body>
+</html>

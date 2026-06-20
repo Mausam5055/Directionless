@@ -1,0 +1,243 @@
+.chat-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 48em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em 1.5em 1.5em;
+}
+
+.chat-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid var(--dark-grey);
+  margin-bottom: 1em;
+}
+
+.chat-back {
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  width: fit-content;
+}
+
+.chat-back:hover {
+  opacity: 1;
+}
+
+.chat-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.chat-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+}
+
+.chat-subtitle {
+  opacity: 0.5;
+  max-width: 24em;
+}
+
+.chat-privacy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  opacity: 0.4;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  padding: 1.5em 0;
+  min-height: 0;
+}
+
+.chat-message {
+  display: flex;
+  gap: 0.75em;
+  align-items: flex-start;
+  max-width: 90%;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.chat-avatar {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: var(--dark-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+.chat-message.user .chat-avatar {
+  background: var(--blue);
+  opacity: 0.8;
+  color: var(--light);
+}
+
+.chat-bubble {
+  font-family: var(--ppnm);
+  font-size: 1.2em;
+  line-height: 1.6;
+  padding: 0.75em 1em;
+  border-radius: 4px;
+  background: var(--light);
+  border: 1px solid var(--dark-grey);
+  color: var(--dark);
+}
+
+.chat-message.user .chat-bubble {
+  background: var(--black);
+  color: var(--grey);
+  border-color: var(--black);
+}
+
+.chat-bubble p {
+  margin: 0;
+}
+
+.chat-bubble p + p {
+  margin-top: 0.5em;
+}
+
+.chat-input-bar {
+  padding-top: 1em;
+  border-top: 1px solid var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.chat-input-wrapper {
+  display: flex;
+  gap: 0.75em;
+  align-items: flex-end;
+}
+
+.chat-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--darker-grey);
+  padding: 0.6em 0;
+  font-family: var(--ppnm);
+  font-size: 1.25em;
+  color: inherit;
+  line-height: 1.5;
+  outline: none;
+  resize: none;
+  transition: border-color 0.3s ease;
+  max-height: 6em;
+}
+
+.chat-input::placeholder {
+  opacity: 0.3;
+  color: inherit;
+}
+
+.chat-input:focus {
+  border-bottom-color: var(--blue);
+}
+
+.chat-send-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  color: var(--darker-grey);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chat-send-btn:hover {
+  color: var(--blue);
+  transform: translateX(2px);
+}
+
+.chat-send-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.chat-footnote {
+  text-align: center;
+  opacity: 0.3;
+  font-size: 0.8em;
+}
+
+.chat-typing {
+  display: flex;
+  gap: 0.4em;
+  padding: 0.75em 1em;
+  align-items: center;
+}
+
+.chat-typing span {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: var(--darker-grey);
+  animation: chatPulse 1.4s ease-in-out infinite;
+}
+
+.chat-typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.chat-typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes chatPulse {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 767px) {
+  .chat-section {
+    padding: 1.5em 1em 1em;
+  }
+
+  .chat-title {
+    font-size: 3.5em;
+  }
+
+  .chat-bubble {
+    font-size: 1.05em;
+  }
+
+  .chat-message {
+    max-width: 100%;
+  }
+}
